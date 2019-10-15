@@ -83,3 +83,57 @@ def createInitSet(dataSet):
     for trans in dataSet:
         retDict[frozenset(trans)] = 1
     return retDict
+
+def findPrefixPath(basePat, treeNode):
+    ''' 创建前缀路径 '''
+    condPats = {}
+    while treeNode != None:
+        prefixPath = []
+        ascendTree(treeNode, prefixPath)
+        if len(prefixPath) > 1:
+            condPats[frozenset(prefixPath[1:])] = treeNode.count
+        treeNode = treeNode.nodeLink
+    return condPats
+
+def ascendTree(leafNode, prefixPath):
+    if leafNode.parent != None:
+        prefixPath.append(leafNode.name)
+        ascendTree(leafNode.parent, prefixPath)
+
+def mineTree(inTree, headerTable, minSup, preFix, freqItemList):
+    bigL = [v[0] for v in sorted(headerTable.items(), key=lambda p: str(p[1]))]
+    '''
+    bigL = [v[0] for v in sorted(headerTable.items(), key=lambda p:p[1])] 此处报错
+    TypeError: ‘<’ not supported between instances of ‘treeNode’ and 'treeNode’
+
+    解决办法有2种：
+    方法一：将p[1]转换成str类型
+    bigL = [v[0] for v in sorted(headerTable.items(), key=lambda p:str(p[1]))]
+
+    方法二：将p[1]改成p[1][0]
+    bigL = [v[0] for v in sorted(headerTable.items(), key=lambda p:p[1][0])]
+    明确指定比较的元素是第一列，如果相等则按照原有顺序排列。
+    ————————————————
+    版权声明：本文为CSDN博主「Janice18」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+    原文链接：https://blog.csdn.net/qq_25886325/article/details/90548833
+    '''
+    for basePat in bigL:
+        newFreqSet = preFix.copy()
+        newFreqSet.add(basePat)
+        freqItemList.append(newFreqSet)
+        condPattBases = findPrefixPath(basePat, headerTable[basePat][1])
+        myCondTree, myHead = createTree(condPattBases, minSup)
+ 
+        if myHead != None:
+            # 用于测试
+            print ('conditional tree for:', newFreqSet)
+            myCondTree.disp()
+ 
+            mineTree(myCondTree, myHead, minSup, newFreqSet, freqItemList)
+
+def fpGrowth(dataSet, minSup=3):
+    initSet = createInitSet(dataSet)
+    myFPtree, myHeaderTab = createTree(initSet, minSup)
+    freqItems = []
+    mineTree(myFPtree, myHeaderTab, minSup, set([]), freqItems)
+    return freqItems
