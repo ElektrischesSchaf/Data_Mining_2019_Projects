@@ -1,5 +1,18 @@
 # 原文链接：https://blog.csdn.net/Gamer_gyt/article/details/51113753
 
+'''
+import fpGrowth
+simpDat = fpGrowth.loadSimpDat()
+initSet = fpGrowth.createInitSet(simpDat)
+myFPtree, myHeaderTab = fpGrowth.createTree(initSet, 3)
+myFPtree.disp()
+
+import fpGrowth
+dataSet = fpGrowth.loadSimpDat()
+freqItems = fpGrowth.fpGrowth(dataSet)
+freqItems
+'''
+
 class treeNode:
     def __init__(self, nameValue, numOccur, parentNode):
         self.name = nameValue
@@ -24,7 +37,8 @@ def createTree(dataSet, minSup=1):
         for item in trans:
             headerTable[item] = headerTable.get(item, 0) + dataSet[trans]
     # 移除不满足最小支持度的元素项
-    #for k in headerTable.keys(): python 2
+    
+    # for k in headerTable.keys(): python 2 version
     for k in list(headerTable):
         if headerTable[k] < minSup:
             del(headerTable[k])
