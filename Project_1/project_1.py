@@ -2,7 +2,6 @@
 # https://blog.csdn.net/Gamer_gyt/article/details/51113753
 
 #from pydoc import apropos
-
 #=========================     准备函数 （下）      ==========================================
 #加载数据集
 def loadDataSet():
@@ -18,16 +17,17 @@ def createC1(dataSet):
     C1.sort()
     print('C1 = ', C1, '\n')
     #map函数表示遍历C1中的每一个元素执行forzenset，frozenset表示“冰冻”的集合，即不可改变
-    return map(frozenset, C1)
+    return set(map(frozenset, C1))  # important, original: return map(frozenset,C1)
 
 #Ck表示数据集，D表示候选集合的列表，minSupport表示最小支持度
 #该函数用于从C1生成L1，L1表示满足最低支持度的元素集合
+
 def scanD(D, Ck, minSupport):
     ssCnt = {}
-    print('D = ', D, '\n')
+    #print('D = ', D, '\n')
 
     for tid in D:
-        print('tid = ', tid) # TODO only run this once
+        print('tid = ', tid) # D and Ck must be "set" type, not "map"
         for can in Ck:
             print('\n run for can in Ck: \n')
             print('can = ',  can)
@@ -45,7 +45,8 @@ def scanD(D, Ck, minSupport):
             else:
                 print('pass')
 
-    numItems = float( len(list(D)) )
+    print('Type of D:' , type(D), '\n')
+    numItems = float( len(D) )
 
     print('\n', 'numItems: ', numItems, '\n')
     retList = []
@@ -90,14 +91,16 @@ def aprioriGen(Lk, k):
 def apriori(dataSet, minSupport=0.2):
 
     C1 = createC1(dataSet)  #创建C1
+    print('Type of C1: ', type(C1))
 
-    D= [[1,3,4],[2,3,5],[1,2,3,5],[2,5]]
-    #D = map(set, dataSet)
+    #D= [ set([1,3,4]), set([2,3,5]), set([1,2,3,5]), set([2,5]) ]
+    D = set( map(frozenset, dataSet) )  # important, original is: map(frozenset,dataset)
     L1, supportData = scanD(D, C1, minSupport)
     print('L1 = ', L1, ', supportData = ', supportData, '\n')
     L = [L1]
     #若两个项集的长度为k - 1,则必须前k-2项相同才可连接，即求并集，所以[:k-2]的实际作用为取列表的前k-1个元素
     k = 2
+
     while(len(L[k-2]) > 0):
         Ck = aprioriGen(L[k-2], k)
         Lk, supK = scanD(D, Ck, minSupport)
@@ -110,6 +113,7 @@ def apriori(dataSet, minSupport=0.2):
 
 if __name__=="__main__":
     dataSet = loadDataSet()
+
     L, suppData = apriori(dataSet)
     i = 0
     for one in L:
