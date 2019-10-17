@@ -24,17 +24,17 @@ def createC1(dataSet):
 
 def scanD(D, Ck, minSupport):
     ssCnt = {}
-    #print('D = ', D, '\n')
+    print('D = ', D, '\n')
 
     for tid in D:
         print('tid = ', tid) # D and Ck must be "set" type, not "map"
         for can in Ck:
-            print('\n run for can in Ck: \n')
+
             print('can = ',  can)
             #issubset：表示如果集合can中的每一元素都在tid中则返回true  
             if can.issubset(tid):
 
-                print('can is D subset: ', can)
+                print('can is D subset: ', can, '\n')
 
                 #统计各个集合scan出现的次数，存入ssCnt字典中，字典的key是集合，value是统计出现的次数
                 
@@ -43,7 +43,7 @@ def scanD(D, Ck, minSupport):
                 else:
                     ssCnt[can] += 1
             else:
-                print('pass')
+                print('Not a subset\n')
 
     print('Type of D:' , type(D), '\n')
     numItems = float( len(D) )
