@@ -33,19 +33,28 @@ def createTree(dataSet, minSup=1):
     ''' 创建FP树 '''
     # 第一次遍历数据集，创建头指针表
     headerTable = {}
+    
     for trans in dataSet:
         for item in trans:
-            headerTable[item] = headerTable.get(item, 0) + dataSet[trans]
+            headerTable[item] = headerTable.get(item, 0) + dataSet[trans]  # dict.get(key, default=None) ; key -- 字典中要查找的键。 default -- 如果指定键的值不存在时，返回该默认值。
+
+            # TODO
+            print('item = ', item, ' trans = ', trans, '\n')
+            print('headerTable[item] = ', headerTable[item],'\n')
+            print('headerTable.get(item, 0) = ', headerTable.get(item, 0), '\n')
+            print('dataSet[trans] = ', dataSet[trans], '\n')
+            print('headerTable = ', headerTable)
+
     # 移除不满足最小支持度的元素项
-    
-    # for k in headerTable.keys(): python 2 version
-    for k in list(headerTable):
+    for k in list(headerTable): # for k in headerTable.keys(): python 2 version
         if headerTable[k] < minSup:
             del(headerTable[k])
+
     # 空元素集，返回空
     freqItemSet = set(headerTable.keys())
     if len(freqItemSet) == 0:
         return None, None
+
     # 增加一个数据项，用于存放指向相似元素项指针
     for k in headerTable:
         headerTable[k] = [headerTable[k], None]
@@ -127,9 +136,6 @@ def mineTree(inTree, headerTable, minSup, preFix, freqItemList):
     方法二：将p[1]改成p[1][0]
     bigL = [v[0] for v in sorted(headerTable.items(), key=lambda p:p[1][0])]
     明确指定比较的元素是第一列，如果相等则按照原有顺序排列。
-    ————————————————
-    版权声明：本文为CSDN博主「Janice18」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-    原文链接：https://blog.csdn.net/qq_25886325/article/details/90548833
     '''
     for basePat in bigL:
         newFreqSet = preFix.copy()
