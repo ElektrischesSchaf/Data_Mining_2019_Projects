@@ -25,7 +25,7 @@ class treeNode:
         self.count += numOccur
  
     def disp(self, ind=1):
-        print (' ' * ind, self.name, ' ', self.count)
+        print ('   ' * ind, self.name, '   ', self.count)
         for child in self.children.values():
             child.disp(ind + 1)
 
@@ -36,12 +36,16 @@ def createTree(dataSet, minSup=1):
     
     for trans in dataSet:
         for item in trans:
-            headerTable[item] = headerTable.get(item, 0) + dataSet[trans]  # dict.get(key, default=None) ; key -- 字典中要查找的键。 default -- 如果指定键的值不存在时，返回该默认值。
 
             # TODO
+            print('In createTree first traversal \n')
             print('item = ', item, ' trans = ', trans, '\n')
-            print('headerTable[item] = ', headerTable[item],'\n')
             print('headerTable.get(item, 0) = ', headerTable.get(item, 0), '\n')
+
+            headerTable[item] = headerTable.get(item, 0) + dataSet[trans]  # dict.get(key, default=None) ; key -- 字典中要查找的键。 default -- 如果指定键的值不存在时，返回该默认值。
+
+            # TODO            
+            print('headerTable[item] = ', headerTable[item],'\n')            
             print('dataSet[trans] = ', dataSet[trans], '\n')
             print('headerTable = ', headerTable)
 
@@ -58,10 +62,17 @@ def createTree(dataSet, minSup=1):
     # 增加一个数据项，用于存放指向相似元素项指针
     for k in headerTable:
         headerTable[k] = [headerTable[k], None]
+
     retTree = treeNode('Null Set', 1, None) # 根节点
+
     # 第二次遍历数据集，创建FP树
     for tranSet, count in dataSet.items():
         localD = {} # 对一个项集tranSet，记录其中每个元素项的全局频率，用于排序
+
+        # TODO
+        print('In createTree second traversal, for tranSet, count in dataSet.items(): \n')
+        print('tranSet = ', tranSet, ' count = ', count, '\n')
+
         for item in tranSet:
             if item in freqItemSet:
                 localD[item] = headerTable[item][0] # 注意这个[0]，因为之前加过一个数据项
@@ -142,6 +153,12 @@ def mineTree(inTree, headerTable, minSup, preFix, freqItemList):
         newFreqSet.add(basePat)
         freqItemList.append(newFreqSet)
         condPattBases = findPrefixPath(basePat, headerTable[basePat][1])
+
+        # TODO
+        print('In mineTree \n')
+        print('basePat = ', basePat, ' headerTable[basePat][1] = ', headerTable[basePat][1], '\n' )        
+        print('condPattBases = ', condPattBases, '\n')
+
         myCondTree, myHead = createTree(condPattBases, minSup)
  
         if myHead != None:
@@ -155,5 +172,11 @@ def fpGrowth(dataSet, minSup=3):
     initSet = createInitSet(dataSet)
     myFPtree, myHeaderTab = createTree(initSet, minSup)
     freqItems = []
+    
+    #TODO
+    myFPtree.disp()
+    print('In fpGrowth, call mineTree: \n')
+    print('*'*30)
+
     mineTree(myFPtree, myHeaderTab, minSup, set([]), freqItems)
     return freqItems
