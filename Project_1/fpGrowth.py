@@ -11,8 +11,17 @@ import fpGrowth
 dataSet = fpGrowth.loadSimpDat()
 freqItems = fpGrowth.fpGrowth(dataSet)
 freqItems
-'''
 
+
+import fpGrowth
+dataSet = fpGrowth.loadKaggleData()
+freqItems = fpGrowth.fpGrowth(dataSet)
+freqItems
+
+'''
+import csv
+
+minium_support=0.1
 class treeNode:
     def __init__(self, nameValue, numOccur, parentNode):
         self.name = nameValue
@@ -29,7 +38,7 @@ class treeNode:
         for child in self.children.values():
             child.disp(ind + 1)
 
-def createTree(dataSet, minSup=1):
+def createTree(dataSet, minSup=minium_support):
     ''' 创建FP树 '''
     # 第一次遍历数据集，创建头指针表
     headerTable = {}
@@ -38,16 +47,16 @@ def createTree(dataSet, minSup=1):
         for item in trans:
 
             # TODO
-            print('In createTree first traversal \n')
-            print('item = ', item, ' trans = ', trans, '\n')
-            print('headerTable.get(item, 0) = ', headerTable.get(item, 0), '\n')
+            #print('In createTree first traversal \n')
+            #print('item = ', item, ' trans = ', trans, '\n')
+            #print('headerTable.get(item, 0) = ', headerTable.get(item, 0), '\n')
 
             headerTable[item] = headerTable.get(item, 0) + dataSet[trans]  # dict.get(key, default=None) ; key -- 字典中要查找的键。 default -- 如果指定键的值不存在时，返回该默认值。
 
             # TODO            
-            print('headerTable[item] = ', headerTable[item],'\n')            
-            print('dataSet[trans] = ', dataSet[trans], '\n')
-            print('headerTable = ', headerTable)
+            #print('headerTable[item] = ', headerTable[item],'\n')            
+            #print('dataSet[trans] = ', dataSet[trans], '\n')
+            #print('headerTable = ', headerTable)
 
     # 移除不满足最小支持度的元素项
     for k in list(headerTable): # for k in headerTable.keys(): python 2 version
@@ -70,8 +79,8 @@ def createTree(dataSet, minSup=1):
         localD = {} # 对一个项集tranSet，记录其中每个元素项的全局频率，用于排序
 
         # TODO
-        print('In createTree second traversal, for tranSet, count in dataSet.items(): \n')
-        print('tranSet = ', tranSet, ' count = ', count, '\n')
+        #print('In createTree second traversal, for tranSet, count in dataSet.items(): \n')
+        #print('tranSet = ', tranSet, ' count = ', count, '\n')
 
         for item in tranSet:
             if item in freqItemSet:
@@ -111,6 +120,34 @@ def loadSimpDat():
                ['y', 'r', 'x', 'z', 'q', 't', 'p'],
                ['y', 'z', 'x', 'e', 'q', 's', 't', 'm']]
     return simpDat
+
+def loadKaggleData():
+    # load Kaggle dataSet
+    csvfile=open('order_products__train.csv', newline='')
+    rows=csv.reader(csvfile)
+    this_order_id=None
+    first_id=False
+    dataSet=[]
+    for row in rows:    
+        if first_id==False:
+            
+            dataSet.append([])
+            this_order_id=row[0]
+            first_id=True    
+
+        if row[0]==this_order_id:
+            dataSet[-1].append(row[1])
+        
+        else:
+            dataSet.append([])
+            dataSet[-1].append(row[1])
+
+        this_order_id=row[0]
+    dataSet=dataSet[1:]
+
+    dataSet=dataSet[:500]
+
+    return dataSet
  
 def createInitSet(dataSet):
     retDict = {}
@@ -155,20 +192,22 @@ def mineTree(inTree, headerTable, minSup, preFix, freqItemList):
         condPattBases = findPrefixPath(basePat, headerTable[basePat][1])
 
         # TODO
-        print('In mineTree \n')
-        print('basePat = ', basePat, ' headerTable[basePat][1] = ', headerTable[basePat][1], '\n' )        
-        print('condPattBases = ', condPattBases, '\n')
+        #print('In mineTree \n')
+        #print('basePat = ', basePat, ' headerTable[basePat][1] = ', headerTable[basePat][1], '\n' )        
+        #print('condPattBases = ', condPattBases, '\n')
 
         myCondTree, myHead = createTree(condPattBases, minSup)
  
         if myHead != None:
             # 用于测试
-            print ('conditional tree for:', newFreqSet)
-            myCondTree.disp()
+            #print ('conditional tree for:', newFreqSet)
+            #myCondTree.disp()
  
             mineTree(myCondTree, myHead, minSup, newFreqSet, freqItemList)
 
-def fpGrowth(dataSet, minSup=3):
+def fpGrowth(dataSet, minSup=minium_support):
+
+
     initSet = createInitSet(dataSet)
     myFPtree, myHeaderTab = createTree(initSet, minSup)
     freqItems = []
