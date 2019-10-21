@@ -1,27 +1,60 @@
 # 原文链接：https://blog.csdn.net/Gamer_gyt/article/details/51113753
 
+# freqeum itemsets of loadDataSet
+'''
+import fpGrowth
+dataSet = fpGrowth.loadDataSet()
+freqItems = fpGrowth.fpGrowth(dataSet)
+freqItems
+'''
+
+# fpTree of simple dataset
 '''
 import fpGrowth
 simpDat = fpGrowth.loadSimpDat()
 initSet = fpGrowth.createInitSet(simpDat)
 myFPtree, myHeaderTab = fpGrowth.createTree(initSet, 3)
 myFPtree.disp()
+'''
 
+# freqeum itemsets of simple data
+'''
 import fpGrowth
 dataSet = fpGrowth.loadSimpDat()
 freqItems = fpGrowth.fpGrowth(dataSet)
 freqItems
+'''
 
-
+# freqeum itemsets of Kaggle dataset
+'''
 import fpGrowth
 dataSet = fpGrowth.loadKaggleData()
 freqItems = fpGrowth.fpGrowth(dataSet)
 freqItems
-
 '''
-import csv
 
-minium_support=0.1
+# freqeum itemsets of IBM dataset
+'''
+import fpGrowth
+dataSet = fpGrowth.loadIBMData()
+freqItems = fpGrowth.fpGrowth(dataSet)
+freqItems
+'''
+
+# fpTree of IBM dataset
+'''
+import fpGrowth
+IBMData= fpGrowth.loadIBMData()
+initSet = fpGrowth.createInitSet(IBMData)
+myFPtree, myHeaderTab = fpGrowth.createTree(initSet, 0.5)
+myFPtree.disp()
+'''
+
+
+import csv
+csvfile_output=open('result_fpGrowth.csv', 'w', newline='')
+writer=csv.writer(csvfile_output, delimiter=' ')
+minium_support=0.5 # IBM 0.01
 class treeNode:
     def __init__(self, nameValue, numOccur, parentNode):
         self.name = nameValue
@@ -112,6 +145,9 @@ def updateHeader(nodeToTest, targetNode):
         nodeToTest = nodeToTest.nodeLink
     nodeToTest.nodeLink = targetNode
 
+def loadDataSet():
+    return [[1,3,4],[2,3,5],[1,2,3,5],[2,5]]
+
 def loadSimpDat():
     simpDat = [['r', 'z', 'h', 'j', 'p'],
                ['z', 'y', 'x', 'w', 'v', 'u', 't', 's'],
@@ -123,7 +159,7 @@ def loadSimpDat():
 
 def loadKaggleData():
     # load Kaggle dataSet
-    csvfile=open('order_products__train.csv', newline='')
+    csvfile=open('order_products_train.csv', newline='')
     rows=csv.reader(csvfile)
     this_order_id=None
     first_id=False
@@ -146,6 +182,34 @@ def loadKaggleData():
     dataSet=dataSet[1:]
 
     dataSet=dataSet[:500]
+
+    return dataSet
+
+def loadIBMData():
+    # load Kaggle dataSet
+    csvfile=open('data.csv', newline='')
+    rows=csv.reader(csvfile)
+    this_order_id=None
+    first_id=False
+    dataSet=[]
+    for row in rows:    
+        if first_id==False:
+            
+            dataSet.append([])
+            this_order_id=row[0]
+            first_id=True    
+
+        if row[0]==this_order_id:
+            dataSet[-1].append(row[1])
+        
+        else:
+            dataSet.append([])
+            dataSet[-1].append(row[1])
+
+        this_order_id=row[0]
+    dataSet=dataSet[1:]
+
+    dataSet=dataSet[:50]
 
     return dataSet
  
@@ -218,4 +282,6 @@ def fpGrowth(dataSet, minSup=minium_support):
     print('*'*30)
 
     mineTree(myFPtree, myHeaderTab, minSup, set([]), freqItems)
+    for rows in freqItems:
+        writer.writerow([rows])
     return freqItems

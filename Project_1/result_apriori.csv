@@ -1,0 +1,441 @@
+minium_support=0.005
+"The itemsets thant contain 1 item(s)[frozenset({'33037'}), frozenset({'4799'}), frozenset({'5818'}), frozenset({'18432'}), frozenset({'15592'}), frozenset({'49175'}), frozenset({'43789'}), frozenset({'17616'}), frozenset({'10385'}), frozenset({'39581'}), frozenset({'32177'}), frozenset({'24489'}), frozenset({'47672'}), frozenset({'28934'}), frozenset({'9515'}), frozenset({'39527'}), frozenset({'16616'}), frozenset({'43735'}), frozenset({'9210'}), frozenset({'20955'}), frozenset({'8805'}), frozenset({'32864'}), frozenset({'36070'}), frozenset({'38159'}), frozenset({'40571'}), frozenset({'11777'}), frozenset({'48523'}), frozenset({'40348'}), frozenset({'4210'}), frozenset({'6210'}), frozenset({'32433'}), frozenset({'27307'}), frozenset({'10145'}), frozenset({'3583'}), frozenset({'39561'}), frozenset({'17706'}), frozenset({'42625'}), frozenset({'42701'}), frozenset({'18811'}), frozenset({'11759'}), frozenset({'21573'}), frozenset({'8021'}), frozenset({'45683'}), frozenset({'5794'}), frozenset({'25830'}), frozenset({'6448'}), frozenset({'14852'}), frozenset({'35914'}), frozenset({'19678'}), frozenset({'34262'}), frozenset({'38772'}), frozenset({'33647'}), frozenset({'7736'}), frozenset({'31805'}), frozenset({'35939'}), frozenset({'23165'}), frozenset({'13535'}), frozenset({'48745'}), frozenset({'19508'}), frozenset({'3957'}), frozenset({'19048'}), frozenset({'7175'}), frozenset({'4605'}), frozenset({'13249'}), frozenset({'37687'}), frozenset({'37307'}), frozenset({'19894'}), frozenset({'21841'}), frozenset({'46969'}), frozenset({'35140'}), frozenset({'5479'}), frozenset({'45210'}), frozenset({'38453'}), frozenset({'23909'}), frozenset({'30720'}), frozenset({'14947'}), frozenset({'2120'}), frozenset({'14778'}), frozenset({'9076'}), frozenset({'42585'}), frozenset({'28928'}), frozenset({'44570'}), frozenset({'12341'}), frozenset({'46149'}), frozenset({'21195'}), frozenset({'5785'}), frozenset({'2180'}), frozenset({'46886'}), frozenset({'40332'}), frozenset({'28842'}), frozenset({'24799'}), frozenset({'16185'}), frozenset({'14197'}), frozenset({'8174'}), frozenset({'34590'}), frozenset({'20114'}), frozenset({'44142'}), frozenset({'8277'}), frozenset({'38456'}), frozenset({'14462'}), frozenset({'10246'}), frozenset({'43961'}), frozenset({'39877'}), frozenset({'30489'}), frozenset({'25005'}), frozenset({'31683'}), frozenset({'48364'}), frozenset({'35336'}), frozenset({'39984'}), frozenset({'39928'}), frozenset({'20842'}), frozenset({'22035'}), frozenset({'18027'}), frozenset({'25138'}), frozenset({'8193'}), frozenset({'13702'}), frozenset({'45535'}), frozenset({'2846'}), frozenset({'49605'}), frozenset({'21019'}), frozenset({'46692'}), frozenset({'16759'}), frozenset({'11712'}), frozenset({'7948'}), frozenset({'49533'}), frozenset({'1463'}), frozenset({'44683'}), frozenset({'43352'}), frozenset({'27548'}), frozenset({'19348'}), frozenset({'38300'}), frozenset({'14992'}), frozenset({'18465'}), frozenset({'890'}), frozenset({'18234'}), frozenset({'5025'}), frozenset({'40706'}), frozenset({'20995'}), frozenset({'46206'}), frozenset({'5068'}), frozenset({'41950'}), frozenset({'46654'}), frozenset({'5212'}), frozenset({'47977'}), frozenset({'49520'}), frozenset({'29987'}), frozenset({'27744'}), frozenset({'46189'}), frozenset({'13870'}), frozenset({'32403'}), frozenset({'23579'}), frozenset({'45788'}), frozenset({'26604'}), frozenset({'17122'}), frozenset({'8615'}), frozenset({'22825'}), frozenset({'9839'}), frozenset({'26800'}), frozenset({'2966'}), frozenset({'46802'}), frozenset({'26940'}), frozenset({'48679'}), frozenset({'11520'}), frozenset({'4920'}), frozenset({'25466'}), frozenset({'31717'}), frozenset({'44987'}), frozenset({'44229'}), frozenset({'30776'}), frozenset({'15455'}), frozenset({'46720'}), frozenset({'27509'}), frozenset({'36695'}), frozenset({'18441'}), frozenset({'35042'}), frozenset({'7461'}), frozenset({'26317'}), frozenset({'26369'}), frozenset({'27521'}), frozenset({'19613'}), frozenset({'260'}), frozenset({'9203'}), frozenset({'35921'}), frozenset({'48110'}), frozenset({'11123'}), frozenset({'28465'}), frozenset({'28985'}), frozenset({'33000'}), frozenset({'12614'}), frozenset({'37524'}), frozenset({'31759'}), frozenset({'8859'}), frozenset({'33198'}), frozenset({'365'}), frozenset({'12745'}), frozenset({'22959'}), frozenset({'196'}), frozenset({'22395'}), frozenset({'30827'}), frozenset({'7862'}), frozenset({'33081'}), frozenset({'13380'}), frozenset({'6550'}), frozenset({'31766'}), frozenset({'46906'}), frozenset({'30233'}), frozenset({'24561'}), frozenset({'4957'}), frozenset({'46522'}), frozenset({'5258'}), frozenset({'29898'}), frozenset({'28204'}), frozenset({'20574'}), frozenset({'27336'}), frozenset({'10132'}), frozenset({'16254'}), frozenset({'49235'}), frozenset({'26915'}), frozenset({'38689'}), frozenset({'35951'}), frozenset({'44910'}), frozenset({'28199'}), frozenset({'25890'}), frozenset({'21405'}), frozenset({'37646'}), frozenset({'35108'}), frozenset({'18370'}), frozenset({'31040'}), frozenset({'31553'}), frozenset({'5646'}), frozenset({'45646'}), frozenset({'9339'}), frozenset({'27966'}), frozenset({'44422'}), frozenset({'45007'}), frozenset({'33731'}), frozenset({'27243'}), frozenset({'33754'}), frozenset({'9598'}), frozenset({'13829'}), frozenset({'27845'}), frozenset({'46676'}), frozenset({'35221'}), frozenset({'13733'}), frozenset({'1999'}), frozenset({'46616'}), frozenset({'44359'}), frozenset({'14678'}), frozenset({'24964'}), frozenset({'42736'}), frozenset({'18918'}), frozenset({'24184'}), frozenset({'24838'}), frozenset({'6046'}), frozenset({'34126'}), frozenset({'31215'}), frozenset({'34358'}), frozenset({'5194'}), frozenset({'44008'}), frozenset({'44116'}), frozenset({'27344'}), frozenset({'45061'}), frozenset({'40310'}), frozenset({'19057'}), frozenset({'35561'}), frozenset({'45066'}), frozenset({'17008'}), frozenset({'48205'}), frozenset({'40604'}), frozenset({'5450'}), frozenset({'32734'}), frozenset({'7781'}), frozenset({'43086'}), frozenset({'16797'}), frozenset({'21174'}), frozenset({'5876'}), frozenset({'47209'}), frozenset({'38273'}), frozenset({'27104'}), frozenset({'30391'}), frozenset({'15872'}), frozenset({'41220'}), frozenset({'25659'}), frozenset({'31343'}), frozenset({'21709'}), frozenset({'8518'}), frozenset({'36189'}), frozenset({'27156'}), frozenset({'43768'}), frozenset({'17758'}), frozenset({'46667'}), frozenset({'47766'}), frozenset({'40198'}), frozenset({'39190'}), frozenset({'37766'}), frozenset({'17794'}), frozenset({'43772'}), frozenset({'39275'}), frozenset({'3765'}), frozenset({'41787'}), frozenset({'22935'}), frozenset({'34243'}), frozenset({'31506'}), frozenset({'38510'}), frozenset({'47216'}), frozenset({'40516'}), frozenset({'49683'}), frozenset({'43295'}), frozenset({'22849'}), frozenset({'44449'}), frozenset({'15937'}), frozenset({'28127'}), frozenset({'6187'}), frozenset({'1194'}), frozenset({'31433'}), frozenset({'14897'}), frozenset({'15290'}), frozenset({'44632'}), frozenset({'2295'}), frozenset({'12206'}), frozenset({'20082'}), frozenset({'6184'}), frozenset({'40199'}), frozenset({'13176'}), frozenset({'1376'}), frozenset({'34969'}), frozenset({'40396'}), frozenset({'38400'}), frozenset({'22128'}), frozenset({'29487'}), frozenset({'49610'}), frozenset({'9387'}), frozenset({'13984'}), frozenset({'26209'}), frozenset({'41860'}), frozenset({'21616'}), frozenset({'47626'}), frozenset({'8670'}), frozenset({'21938'}), frozenset({'23375'}), frozenset({'32655'}), frozenset({'38739'}), frozenset({'10749'}), frozenset({'24830'}), frozenset({'11182'}), frozenset({'21288'}), frozenset({'46979'}), frozenset({'33120'}), frozenset({'23452'}), frozenset({'38293'}), frozenset({'1940'}), frozenset({'24852'}), frozenset({'48800'}), frozenset({'33846'}), frozenset({'29127'}), frozenset({'21903'}), frozenset({'19660'}), frozenset({'24810'}), frozenset({'41844'}), frozenset({'42768'}), frozenset({'42265'}), frozenset({'28849'}), frozenset({'37029'}), frozenset({'42342'}), frozenset({'22963'}), frozenset({'5077'}), frozenset({'37067'}), frozenset({'21137'}), frozenset({'8424'})]"
+"The itemsets thant contain 2 item(s)[frozenset({'10749', '40706'}), frozenset({'24852', '31717'}), frozenset({'5876', '21903'}), frozenset({'13176', '39877'}), frozenset({'31717', '40706'}), frozenset({'10749', '48679'}), frozenset({'24852', '47209'}), frozenset({'27104', '40706'}), frozenset({'47209', '40706'}), frozenset({'10385', '40706'}), frozenset({'43961', '21903'}), frozenset({'47626', '22935'}), frozenset({'22935', '40706'}), frozenset({'27845', '21137'}), frozenset({'12341', '31506'}), frozenset({'30391', '40706'}), frozenset({'16797', '28204'}), frozenset({'42585', '28204'}), frozenset({'47626', '5077'}), frozenset({'5077', '24852'}), frozenset({'27104', '24852'}), frozenset({'24184', '27104'}), frozenset({'47626', '34358'}), frozenset({'21903', '45007'}), frozenset({'21903', '31553'}), frozenset({'47626', '40706'}), frozenset({'45007', '40706'}), frozenset({'42768', '42585'}), frozenset({'42585', '21903'}), frozenset({'42585', '26209'}), frozenset({'26209', '5876'}), frozenset({'5450', '31717'}), frozenset({'47766', '21137'}), frozenset({'13176', '5876'}), frozenset({'35140', '21903'}), frozenset({'16797', '11777'}), frozenset({'13176', '4920'}), frozenset({'26209', '45066'}), frozenset({'24852', '4605'}), frozenset({'26209', '4605'}), frozenset({'30391', '42265'}), frozenset({'39877', '42265'}), frozenset({'39877', '47209'}), frozenset({'12341', '21137'}), frozenset({'49683', '21903'}), frozenset({'24852', '27521'}), frozenset({'21616', '24852'}), frozenset({'21616', '45066'}), frozenset({'21616', '28842'}), frozenset({'27104', '19057'}), frozenset({'30391', '39877'}), frozenset({'39877', '27845'}), frozenset({'48745', '31717'}), frozenset({'27104', '21903'}), frozenset({'10749', '21137'}), frozenset({'13176', '10749'}), frozenset({'22935', '10749'}), frozenset({'42768', '45007'}), frozenset({'27521', '47209'}), frozenset({'13176', '8277'}), frozenset({'48745', '45007'}), frozenset({'30391', '13176'}), frozenset({'27104', '21137'}), frozenset({'30391', '47209'}), frozenset({'21405', '21137'}), frozenset({'34126', '21405'}), frozenset({'43961', '24852'}), frozenset({'8277', '27966'}), frozenset({'30391', '22935'}), frozenset({'13176', '11520'}), frozenset({'13176', '40604'}), frozenset({'24852', '28204'}), frozenset({'28928', '24852'}), frozenset({'24852', '47766'}), frozenset({'28842', '24852'}), frozenset({'42736', '24852'}), frozenset({'21903', '40706'}), frozenset({'24852', '21903'}), frozenset({'26209', '24852'}), frozenset({'17794', '21903'}), frozenset({'17794', '24852'}), frozenset({'40604', '26209'}), frozenset({'24184', '21903'}), frozenset({'24184', '24852'}), frozenset({'24184', '40604'}), frozenset({'24964', '24852'}), frozenset({'24852', '48679'}), frozenset({'39877', '21137'}), frozenset({'39877', '21903'}), frozenset({'21903', '38456'}), frozenset({'8277', '21137'}), frozenset({'8277', '44359'}), frozenset({'24852', '20114'}), frozenset({'21903', '34590'}), frozenset({'21137', '8174'}), frozenset({'21903', '8174'}), frozenset({'42265', '47209'}), frozenset({'41220', '44359'}), frozenset({'39877', '24852'}), frozenset({'39877', '44359'}), frozenset({'27845', '45007'}), frozenset({'25005', '27845'}), frozenset({'30391', '31717'}), frozenset({'41950', '31717'}), frozenset({'39928', '21137'}), frozenset({'13176', '25138'}), frozenset({'22035', '13176'}), frozenset({'19660', '21137'}), frozenset({'21288', '21137'}), frozenset({'21903', '27845'}), frozenset({'13176', '27845'}), frozenset({'21903', '8193'}), frozenset({'13702', '13176'}), frozenset({'44632', '22935'}), frozenset({'24852', '41844'}), frozenset({'24852', '21405'}), frozenset({'24964', '21616'}), frozenset({'1463', '13176'}), frozenset({'13176', '7948'}), frozenset({'13176', '11712'}), frozenset({'27548', '21903'}), frozenset({'24852', '27845'}), frozenset({'24852', '40706'}), frozenset({'27845', '40706'}), frozenset({'31553', '40706'}), frozenset({'44632', '35221'}), frozenset({'19057', '21137'}), frozenset({'41950', '21137'}), frozenset({'46667', '41950'}), frozenset({'19057', '20995'}), frozenset({'21137', '40706'}), frozenset({'19057', '40706'}), frozenset({'24964', '5450'}), frozenset({'41950', '5450'}), frozenset({'10749', '47209'}), frozenset({'45007', '47209'}), frozenset({'18370', '10749'}), frozenset({'16797', '39275'}), frozenset({'42768', '21903'}), frozenset({'24830', '21137'}), frozenset({'13176', '42768'}), frozenset({'13176', '21903'}), frozenset({'13176', '26209'}), frozenset({'21903', '47209'}), frozenset({'47626', '47209'}), frozenset({'26209', '47209'}), frozenset({'13176', '47209'}), frozenset({'24964', '21903'}), frozenset({'47626', '24964'}), frozenset({'24964', '26209'}), frozenset({'24964', '47209'}), frozenset({'27966', '21137'}), frozenset({'27966', '21903'}), frozenset({'27966', '47209'}), frozenset({'31717', '21137'}), frozenset({'31717', '21903'}), frozenset({'26209', '31717'}), frozenset({'31717', '47209'}), frozenset({'24964', '31717'}), frozenset({'27966', '31717'}), frozenset({'22395', '31717'}), frozenset({'48679', '21137'}), frozenset({'21903', '48679'}), frozenset({'26209', '48679'}), frozenset({'13176', '48679'}), frozenset({'48679', '47209'}), frozenset({'24964', '48679'}), frozenset({'46802', '21137'}), frozenset({'46802', '21903'}), frozenset({'13176', '2966'}), frozenset({'2966', '47209'}), frozenset({'9839', '26209'}), frozenset({'9839', '13176'}), frozenset({'9839', '47209'}), frozenset({'8615', '21137'}), frozenset({'26604', '21137'}), frozenset({'26604', '21903'}), frozenset({'26604', '47209'}), frozenset({'24852', '4920'}), frozenset({'13176', '22935'}), frozenset({'13176', '25659'}), frozenset({'22935', '34126'}), frozenset({'22935', '45007'}), frozenset({'13176', '27966'}), frozenset({'24964', '27966'}), frozenset({'13176', '18441'}), frozenset({'27966', '18441'}), frozenset({'13176', '36695'}), frozenset({'22935', '46720'}), frozenset({'13176', '30776'}), frozenset({'27966', '30776'}), frozenset({'21903', '21137'}), frozenset({'47626', '21137'}), frozenset({'26209', '21137'}), frozenset({'9387', '21137'}), frozenset({'39275', '21137'}), frozenset({'46667', '21137'}), frozenset({'30391', '8424'}), frozenset({'30391', '21903'}), frozenset({'30391', '47626'}), frozenset({'30391', '26209'}), frozenset({'30391', '39275'}), frozenset({'30391', '34126'}), frozenset({'44359', '21903'}), frozenset({'47626', '44359'}), frozenset({'30391', '19613'}), frozenset({'44359', '19613'}), frozenset({'27521', '21137'}), frozenset({'21903', '27521'}), frozenset({'46667', '27521'}), frozenset({'26209', '26369'}), frozenset({'22935', '21137'}), frozenset({'21137', '47209'}), frozenset({'34243', '47209'}), frozenset({'22935', '47209'}), frozenset({'5876', '21137'}), frozenset({'22935', '5876'}), frozenset({'27344', '21137'}), frozenset({'22935', '27344'}), frozenset({'31506', '21137'}), frozenset({'13176', '47626'}), frozenset({'47626', '39275'}), frozenset({'39275', '24852'}), frozenset({'24852', '27966'}), frozenset({'39275', '27966'}), frozenset({'39275', '37646'}), frozenset({'31343', '24852'}), frozenset({'16797', '24852'}), frozenset({'21903', '34969'}), frozenset({'45007', '21137'}), frozenset({'35951', '21903'}), frozenset({'24184', '7781'}), frozenset({'47626', '45007'}), frozenset({'37067', '44422'}), frozenset({'47626', '27966'}), frozenset({'27966', '45007'}), frozenset({'21938', '31553'}), frozenset({'47626', '31553'}), frozenset({'8518', '21137'}), frozenset({'34126', '21137'}), frozenset({'13176', '34126'}), frozenset({'17794', '34126'}), frozenset({'24838', '21137'}), frozenset({'24184', '17794'}), frozenset({'24184', '34126'}), frozenset({'24964', '21137'}), frozenset({'13176', '24964'}), frozenset({'24964', '17794'}), frozenset({'24964', '34126'}), frozenset({'24964', '24184'}), frozenset({'24964', '42736'}), frozenset({'44359', '21137'}), frozenset({'8518', '44359'}), frozenset({'44359', '34126'}), frozenset({'24964', '44359'}), frozenset({'24852', '9387'}), frozenset({'27344', '24852'}), frozenset({'24852', '34358'}), frozenset({'17758', '31215'}), frozenset({'16797', '21903'}), frozenset({'5450', '24852'}), frozenset({'48205', '24852'}), frozenset({'24852', '45066'}), frozenset({'27104', '47209'}), frozenset({'27104', '5876'}), frozenset({'5876', '47209'}), frozenset({'41220', '21137'}), frozenset({'15872', '21137'}), frozenset({'30391', '21137'}), frozenset({'30391', '15872'}), frozenset({'47626', '8424'}), frozenset({'26209', '21903'}), frozenset({'26209', '10749'}), frozenset({'47626', '26209'}), frozenset({'44632', '8424'}), frozenset({'31506', '21903'}), frozenset({'31506', '47626'}), frozenset({'31506', '26209'}), frozenset({'47766', '21903'}), frozenset({'47626', '47766'}), frozenset({'26209', '47766'}), frozenset({'46667', '21903'}), frozenset({'46667', '47626'}), frozenset({'46667', '26209'}), frozenset({'40198', '17758'}), frozenset({'21903', '25659'}), frozenset({'10749', '25659'}), frozenset({'13176', '21137'}), frozenset({'13176', '11182'}), frozenset({'17794', '21137'}), frozenset({'13176', '17794'}), frozenset({'12206', '24852'}), frozenset({'24852', '21137'}), frozenset({'24852', '34969'}), frozenset({'21903', '10749'}), frozenset({'47626', '21903'}), frozenset({'47626', '10749'}), frozenset({'21616', '21903'}), frozenset({'47626', '21616'}), frozenset({'24852', '1940'}), frozenset({'8424', '21137'}), frozenset({'5077', '21137'}), frozenset({'8424', '42265'}), frozenset({'21137', '42265'}), frozenset({'42768', '21137'})]"
+"The itemsets thant contain 3 item(s)[frozenset({'26209', '24852', '31717'}), frozenset({'5876', '21903', '21137'}), frozenset({'26209', '5876', '21137'}), frozenset({'42585', '21903', '26209'}), frozenset({'47626', '21903', '40706'}), frozenset({'26209', '24852', '4605'}), frozenset({'30391', '39877', '47209'}), frozenset({'39877', '21137', '47209'}), frozenset({'24852', '21903', '34969'}), frozenset({'21616', '24852', '45066'}), frozenset({'10749', '21137', '47209'}), frozenset({'30391', '21137', '47209'}), frozenset({'44359', '39877', '21903'}), frozenset({'39877', '21903', '21137'}), frozenset({'26209', '24852', '21903'}), frozenset({'26209', '24852', '21137'}), frozenset({'26209', '24852', '48679'}), frozenset({'24852', '21903', '21137'}), frozenset({'24852', '21903', '48679'}), frozenset({'13176', '21903', '27845'}), frozenset({'47626', '24964', '21616'}), frozenset({'24964', '21616', '21903'}), frozenset({'26604', '21137', '47209'}), frozenset({'26604', '21903', '21137'}), frozenset({'9839', '13176', '47209'}), frozenset({'24964', '48679', '21137'}), frozenset({'26209', '21903', '48679'}), frozenset({'26209', '48679', '21137'}), frozenset({'21903', '48679', '21137'}), frozenset({'47209', '48679', '21137'}), frozenset({'26209', '31717', '21903'}), frozenset({'26209', '31717', '21137'}), frozenset({'31717', '21903', '47209'}), frozenset({'31717', '21903', '21137'}), frozenset({'27966', '21903', '31717'}), frozenset({'24964', '26209', '21137'}), frozenset({'24964', '26209', '48679'}), frozenset({'47626', '24964', '21903'}), frozenset({'24964', '21903', '21137'}), frozenset({'24964', '21903', '48679'}), frozenset({'24964', '26209', '21903'}), frozenset({'13176', '21137', '47209'}), frozenset({'13176', '47626', '47209'}), frozenset({'13176', '2966', '47209'}), frozenset({'26209', '21137', '47209'}), frozenset({'26209', '31717', '47209'}), frozenset({'47626', '27966', '47209'}), frozenset({'21903', '21137', '47209'}), frozenset({'13176', '21903', '47209'}), frozenset({'47626', '44359', '21903'}), frozenset({'44359', '21903', '21137'}), frozenset({'30391', '47626', '8424'}), frozenset({'26209', '21903', '21137'}), frozenset({'47626', '21903', '21137'}), frozenset({'47626', '26209', '21137'}), frozenset({'5876', '21137', '47209'}), frozenset({'22935', '21137', '47209'}), frozenset({'44359', '21137', '34126'}), frozenset({'24964', '44359', '34126'}), frozenset({'24964', '34126', '24184'}), frozenset({'17794', '34126', '21137'}), frozenset({'13176', '24964', '34126'}), frozenset({'31506', '26209', '21903'}), frozenset({'47626', '26209', '21903'}), frozenset({'26209', '21903', '10749'}), frozenset({'13176', '17794', '21137'}), frozenset({'47626', '21616', '21903'})]"
+"The itemsets thant contain 4 item(s)[frozenset({'24852', '21903', '26209', '48679'}), frozenset({'24852', '21903', '21137', '26209'}), frozenset({'21903', '21137', '24964', '48679'}), frozenset({'21903', '24964', '26209', '48679'}), frozenset({'21903', '21137', '24964', '26209'}), frozenset({'21137', '24964', '26209', '48679'}), frozenset({'21903', '21137', '26209', '31717'}), frozenset({'21903', '21137', '26209', '48679'})]"
+"The itemsets thant contain 5 item(s)[frozenset({'21903', '24964', '26209', '48679', '21137'})]"
+"The itemsets thant contain 6 item(s)[]"
+minConf=0.7®É¡G
+frozenset({'10385'}) --> frozenset({'40706'}) "conf: " 0.7500000000000001
+frozenset({'35140'}) --> frozenset({'21903'}) "conf: " 0.7500000000000001
+frozenset({'11777'}) --> frozenset({'16797'}) "conf: " 0.7999999999999999
+frozenset({'28928'}) --> frozenset({'24852'}) "conf: " 1.0
+frozenset({'38456'}) --> frozenset({'21903'}) "conf: " 1.0
+frozenset({'25005'}) --> frozenset({'27845'}) "conf: " 0.7500000000000001
+frozenset({'39928'}) --> frozenset({'21137'}) "conf: " 0.7500000000000001
+frozenset({'13702'}) --> frozenset({'13176'}) "conf: " 0.7500000000000001
+frozenset({'41844'}) --> frozenset({'24852'}) "conf: " 0.7142857142857143
+frozenset({'7948'}) --> frozenset({'13176'}) "conf: " 1.0
+frozenset({'11712'}) --> frozenset({'13176'}) "conf: " 1.0
+frozenset({'8615'}) --> frozenset({'21137'}) "conf: " 1.0
+frozenset({'18441'}) --> frozenset({'13176'}) "conf: " 0.7500000000000001
+frozenset({'18441'}) --> frozenset({'27966'}) "conf: " 0.7500000000000001
+frozenset({'46720'}) --> frozenset({'22935'}) "conf: " 1.0
+frozenset({'19613'}) --> frozenset({'30391'}) "conf: " 0.7500000000000001
+frozenset({'19613'}) --> frozenset({'44359'}) "conf: " 0.7500000000000001
+frozenset({'44422'}) --> frozenset({'37067'}) "conf: " 1.0
+frozenset({'24838'}) --> frozenset({'21137'}) "conf: " 0.7500000000000001
+frozenset({'40198'}) --> frozenset({'17758'}) "conf: " 1.0
+"frozenset({'24852', '31717'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'5876', '21903'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'26209', '5876'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'42585', '26209'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'42585', '21903'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'47626', '40706'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24852', '4605'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '4605'})" --> frozenset({'24852'}) "conf: " 1.0
+"frozenset({'39877', '47209'})" --> frozenset({'30391'}) "conf: " 0.7500000000000001
+"frozenset({'30391', '39877'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'39877', '47209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'21616', '45066'})" --> frozenset({'24852'}) "conf: " 1.0
+"frozenset({'10749', '47209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'10749', '21137'})" --> frozenset({'47209'}) "conf: " 1.0
+"frozenset({'30391', '47209'})" --> frozenset({'21137'}) "conf: " 0.7999999999999999
+"frozenset({'39877', '44359'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'24852', '48679'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24852', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'47626', '21616'})" --> frozenset({'24964'}) "conf: " 0.7500000000000001
+"frozenset({'26604', '47209'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'26604', '21137'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'26604', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'26604', '21903'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'9839', '47209'})" --> frozenset({'13176'}) "conf: " 1.0
+"frozenset({'9839', '13176'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'48679', '21137'})" --> frozenset({'24964'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> frozenset({'48679'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '48679'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'21903', '48679'})" --> frozenset({'26209'}) "conf: " 0.8333333333333333
+"frozenset({'26209', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'48679', '21137'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'48679', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'48679', '21137'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'48679', '47209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'31717', '21903'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'31717', '21903'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'31717', '21903'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'21903', '31717'})" --> frozenset({'27966'}) "conf: " 0.7500000000000001
+"frozenset({'27966', '31717'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'27966', '21903'})" --> frozenset({'31717'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '26209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '48679'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209'})" --> frozenset({'48679'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24964', '26209'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'2966', '47209'})" --> frozenset({'13176'}) "conf: " 1.0
+"frozenset({'13176', '2966'})" --> frozenset({'47209'}) "conf: " 1.0
+"frozenset({'47626', '44359'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'44359', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'30391', '8424'})" --> frozenset({'47626'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '21137'})" --> frozenset({'21903'}) "conf: " 0.7142857142857143
+"frozenset({'5876', '47209'})" --> frozenset({'21137'}) "conf: " 0.7999999999999999
+"frozenset({'5876', '21137'})" --> frozenset({'47209'}) "conf: " 0.7999999999999999
+"frozenset({'22935', '47209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'22935', '21137'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'44359', '34126'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'44359', '21137'})" --> frozenset({'34126'}) "conf: " 0.7500000000000001
+"frozenset({'44359', '34126'})" --> frozenset({'24964'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '44359'})" --> frozenset({'34126'}) "conf: " 1.0
+"frozenset({'24184', '34126'})" --> frozenset({'24964'}) "conf: " 1.0
+"frozenset({'17794', '21137'})" --> frozenset({'34126'}) "conf: " 0.7500000000000001
+"frozenset({'17794', '34126'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'13176', '34126'})" --> frozenset({'24964'}) "conf: " 0.7500000000000001
+"frozenset({'31506', '21903'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'31506', '26209'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'47626', '26209'})" --> frozenset({'21903'}) "conf: " 0.7999999999999999
+"frozenset({'26209', '10749'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'17794', '21137'})" --> frozenset({'13176'}) "conf: " 0.7500000000000001
+"frozenset({'13176', '17794'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'47626', '21616'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '24852', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24852', '21903', '48679'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'26209', '24852', '21903'})" --> frozenset({'48679'}) "conf: " 0.7500000000000001
+"frozenset({'24852', '48679'})" --> "frozenset({'26209', '21903'})" "conf: " 1.0
+"frozenset({'26209', '24852', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '24852', '21903'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'24852', '21903', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '48679', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24964', '21903', '48679'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'48679', '21903', '21137'})" --> frozenset({'24964'}) "conf: " 1.0
+"frozenset({'24964', '21903', '21137'})" --> frozenset({'48679'}) "conf: " 1.0
+"frozenset({'24964', '48679'})" --> "frozenset({'21903', '21137'})" "conf: " 1.0
+"frozenset({'48679', '21137'})" --> "frozenset({'24964', '21903'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> "frozenset({'21903', '48679'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '26209', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24964', '21903', '48679'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21903'})" --> frozenset({'48679'}) "conf: " 1.0
+"frozenset({'24964', '48679'})" --> "frozenset({'26209', '21903'})" "conf: " 1.0
+"frozenset({'24964', '26209'})" --> "frozenset({'21903', '48679'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '26209', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21903'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'24964', '21903', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209'})" --> "frozenset({'21903', '21137'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> "frozenset({'26209', '21903'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '26209', '48679'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'48679', '26209', '21137'})" --> frozenset({'24964'}) "conf: " 1.0
+"frozenset({'24964', '48679', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21137'})" --> frozenset({'48679'}) "conf: " 1.0
+"frozenset({'24964', '48679'})" --> "frozenset({'26209', '21137'})" "conf: " 1.0
+"frozenset({'24964', '26209'})" --> "frozenset({'48679', '21137'})" "conf: " 0.7500000000000001
+"frozenset({'48679', '21137'})" --> "frozenset({'24964', '26209'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> "frozenset({'26209', '48679'})" "conf: " 0.7500000000000001
+"frozenset({'26209', '31717', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'26209', '21903', '31717'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'21903', '21137', '31717'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'21903', '31717'})" --> "frozenset({'26209', '21137'})" "conf: " 0.7500000000000001
+"frozenset({'48679', '26209', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'48679', '21903', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'48679', '21137'})" --> "frozenset({'26209', '21903'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '26209', '48679', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'26209', '21903', '48679', '21137'})" --> frozenset({'24964'}) "conf: " 1.0
+"frozenset({'24964', '21903', '48679', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21903', '21137'})" --> frozenset({'48679'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21903', '48679'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'26209', '48679', '21137'})" --> "frozenset({'24964', '21903'})" "conf: " 1.0
+"frozenset({'24964', '48679', '21137'})" --> "frozenset({'26209', '21903'})" "conf: " 1.0
+"frozenset({'24964', '26209', '21137'})" --> "frozenset({'21903', '48679'})" "conf: " 1.0
+"frozenset({'24964', '26209', '48679'})" --> "frozenset({'21903', '21137'})" "conf: " 1.0
+"frozenset({'21903', '48679', '21137'})" --> "frozenset({'24964', '26209'})" "conf: " 1.0
+"frozenset({'24964', '21903', '21137'})" --> "frozenset({'26209', '48679'})" "conf: " 1.0
+"frozenset({'24964', '21903', '48679'})" --> "frozenset({'26209', '21137'})" "conf: " 1.0
+"frozenset({'24964', '26209', '21903'})" --> "frozenset({'48679', '21137'})" "conf: " 1.0
+"frozenset({'48679', '21137'})" --> "frozenset({'24964', '26209', '21903'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> "frozenset({'26209', '21903', '48679'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '48679'})" --> "frozenset({'26209', '21903', '21137'})" "conf: " 1.0
+"frozenset({'24964', '26209'})" --> "frozenset({'21903', '48679', '21137'})" "conf: " 0.7500000000000001
+minConf=0.5®É¡G
+frozenset({'10385'}) --> frozenset({'40706'}) "conf: " 0.7500000000000001
+frozenset({'42585'}) --> frozenset({'21903'}) "conf: " 0.5714285714285714
+frozenset({'35140'}) --> frozenset({'21903'}) "conf: " 0.7500000000000001
+frozenset({'11777'}) --> frozenset({'16797'}) "conf: " 0.7999999999999999
+frozenset({'4605'}) --> frozenset({'24852'}) "conf: " 0.5
+frozenset({'12341'}) --> frozenset({'21137'}) "conf: " 0.5
+frozenset({'28928'}) --> frozenset({'24852'}) "conf: " 1.0
+frozenset({'42736'}) --> frozenset({'24852'}) "conf: " 0.5
+frozenset({'38456'}) --> frozenset({'21903'}) "conf: " 1.0
+frozenset({'20114'}) --> frozenset({'24852'}) "conf: " 0.5
+frozenset({'34590'}) --> frozenset({'21903'}) "conf: " 0.6000000000000001
+frozenset({'41220'}) --> frozenset({'44359'}) "conf: " 0.5
+frozenset({'25005'}) --> frozenset({'27845'}) "conf: " 0.7500000000000001
+frozenset({'39928'}) --> frozenset({'21137'}) "conf: " 0.7500000000000001
+frozenset({'25138'}) --> frozenset({'13176'}) "conf: " 0.6000000000000001
+frozenset({'22035'}) --> frozenset({'13176'}) "conf: " 0.6666666666666665
+frozenset({'21288'}) --> frozenset({'21137'}) "conf: " 0.5714285714285714
+frozenset({'8193'}) --> frozenset({'21903'}) "conf: " 0.5
+frozenset({'13702'}) --> frozenset({'13176'}) "conf: " 0.7500000000000001
+frozenset({'41844'}) --> frozenset({'24852'}) "conf: " 0.7142857142857143
+frozenset({'1463'}) --> frozenset({'13176'}) "conf: " 0.6000000000000001
+frozenset({'7948'}) --> frozenset({'13176'}) "conf: " 1.0
+frozenset({'11712'}) --> frozenset({'13176'}) "conf: " 1.0
+frozenset({'27548'}) --> frozenset({'21903'}) "conf: " 0.5
+frozenset({'35221'}) --> frozenset({'44632'}) "conf: " 0.5
+frozenset({'18370'}) --> frozenset({'10749'}) "conf: " 0.6000000000000001
+frozenset({'24830'}) --> frozenset({'21137'}) "conf: " 0.5
+frozenset({'22395'}) --> frozenset({'31717'}) "conf: " 0.6000000000000001
+frozenset({'48679'}) --> frozenset({'21903'}) "conf: " 0.5
+frozenset({'2966'}) --> frozenset({'13176'}) "conf: " 0.6000000000000001
+frozenset({'2966'}) --> frozenset({'47209'}) "conf: " 0.6000000000000001
+frozenset({'9839'}) --> frozenset({'13176'}) "conf: " 0.5
+frozenset({'8615'}) --> frozenset({'21137'}) "conf: " 1.0
+frozenset({'26604'}) --> frozenset({'21137'}) "conf: " 0.5714285714285714
+frozenset({'25659'}) --> frozenset({'13176'}) "conf: " 0.5714285714285714
+frozenset({'18441'}) --> frozenset({'13176'}) "conf: " 0.7500000000000001
+frozenset({'18441'}) --> frozenset({'27966'}) "conf: " 0.7500000000000001
+frozenset({'36695'}) --> frozenset({'13176'}) "conf: " 0.6000000000000001
+frozenset({'46720'}) --> frozenset({'22935'}) "conf: " 1.0
+frozenset({'30776'}) --> frozenset({'13176'}) "conf: " 0.5
+frozenset({'30776'}) --> frozenset({'27966'}) "conf: " 0.5
+frozenset({'44359'}) --> frozenset({'21903'}) "conf: " 0.5454545454545454
+frozenset({'19613'}) --> frozenset({'30391'}) "conf: " 0.7500000000000001
+frozenset({'19613'}) --> frozenset({'44359'}) "conf: " 0.7500000000000001
+frozenset({'31343'}) --> frozenset({'24852'}) "conf: " 0.6000000000000001
+frozenset({'44422'}) --> frozenset({'37067'}) "conf: " 1.0
+frozenset({'24838'}) --> frozenset({'21137'}) "conf: " 0.7500000000000001
+frozenset({'31215'}) --> frozenset({'17758'}) "conf: " 0.5
+frozenset({'17758'}) --> frozenset({'31215'}) "conf: " 0.6000000000000001
+frozenset({'48205'}) --> frozenset({'24852'}) "conf: " 0.5
+frozenset({'45066'}) --> frozenset({'24852'}) "conf: " 0.5
+frozenset({'41220'}) --> frozenset({'21137'}) "conf: " 0.5
+frozenset({'15872'}) --> frozenset({'21137'}) "conf: " 0.6000000000000001
+frozenset({'15872'}) --> frozenset({'30391'}) "conf: " 0.6000000000000001
+frozenset({'8424'}) --> frozenset({'47626'}) "conf: " 0.6000000000000001
+frozenset({'17758'}) --> frozenset({'40198'}) "conf: " 0.6000000000000001
+frozenset({'40198'}) --> frozenset({'17758'}) "conf: " 1.0
+frozenset({'11182'}) --> frozenset({'13176'}) "conf: " 0.6000000000000001
+frozenset({'12206'}) --> frozenset({'24852'}) "conf: " 0.6000000000000001
+frozenset({'34969'}) --> frozenset({'24852'}) "conf: " 0.5384615384615384
+frozenset({'21616'}) --> frozenset({'21903'}) "conf: " 0.5384615384615384
+frozenset({'1940'}) --> frozenset({'24852'}) "conf: " 0.6000000000000001
+"frozenset({'24852', '31717'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'26209', '31717'})" --> frozenset({'24852'}) "conf: " 0.6000000000000001
+"frozenset({'5876', '21137'})" --> frozenset({'21903'}) "conf: " 0.6000000000000001
+"frozenset({'5876', '21903'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'5876', '21137'})" --> frozenset({'26209'}) "conf: " 0.6000000000000001
+"frozenset({'26209', '5876'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'42585', '26209'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'42585', '21903'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'47626', '40706'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24852', '4605'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '4605'})" --> frozenset({'24852'}) "conf: " 1.0
+"frozenset({'39877', '47209'})" --> frozenset({'30391'}) "conf: " 0.7500000000000001
+"frozenset({'30391', '47209'})" --> frozenset({'39877'}) "conf: " 0.6000000000000001
+"frozenset({'30391', '39877'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'39877', '47209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'39877', '21137'})" --> frozenset({'47209'}) "conf: " 0.6000000000000001
+"frozenset({'21903', '34969'})" --> frozenset({'24852'}) "conf: " 0.6000000000000001
+"frozenset({'21616', '45066'})" --> frozenset({'24852'}) "conf: " 1.0
+"frozenset({'21616', '24852'})" --> frozenset({'45066'}) "conf: " 0.6000000000000001
+"frozenset({'10749', '47209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'10749', '21137'})" --> frozenset({'47209'}) "conf: " 1.0
+"frozenset({'30391', '47209'})" --> frozenset({'21137'}) "conf: " 0.7999999999999999
+"frozenset({'30391', '21137'})" --> frozenset({'47209'}) "conf: " 0.5714285714285714
+"frozenset({'39877', '21903'})" --> frozenset({'44359'}) "conf: " 0.5
+"frozenset({'44359', '21903'})" --> frozenset({'39877'}) "conf: " 0.5
+"frozenset({'39877', '44359'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'39877', '21137'})" --> frozenset({'21903'}) "conf: " 0.6000000000000001
+"frozenset({'39877', '21903'})" --> frozenset({'21137'}) "conf: " 0.5
+"frozenset({'26209', '24852'})" --> frozenset({'21903'}) "conf: " 0.5
+"frozenset({'26209', '21137'})" --> frozenset({'24852'}) "conf: " 0.5714285714285714
+"frozenset({'26209', '24852'})" --> frozenset({'21137'}) "conf: " 0.5
+"frozenset({'24852', '48679'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'26209', '48679'})" --> frozenset({'24852'}) "conf: " 0.6000000000000001
+"frozenset({'21903', '48679'})" --> frozenset({'24852'}) "conf: " 0.5
+"frozenset({'24852', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'21903', '27845'})" --> frozenset({'13176'}) "conf: " 0.6000000000000001
+"frozenset({'13176', '27845'})" --> frozenset({'21903'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '21616'})" --> frozenset({'47626'}) "conf: " 0.6000000000000001
+"frozenset({'47626', '21616'})" --> frozenset({'24964'}) "conf: " 0.7500000000000001
+"frozenset({'47626', '24964'})" --> frozenset({'21616'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '21903'})" --> frozenset({'21616'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '21616'})" --> frozenset({'21903'}) "conf: " 0.6000000000000001
+"frozenset({'26604', '47209'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'26604', '21137'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'26604', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'26604', '21903'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'9839', '47209'})" --> frozenset({'13176'}) "conf: " 1.0
+"frozenset({'9839', '13176'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'48679', '21137'})" --> frozenset({'24964'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> frozenset({'48679'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '48679'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'21903', '48679'})" --> frozenset({'26209'}) "conf: " 0.8333333333333333
+"frozenset({'26209', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'26209', '21903'})" --> frozenset({'48679'}) "conf: " 0.5
+"frozenset({'48679', '21137'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '48679'})" --> frozenset({'21137'}) "conf: " 0.6000000000000001
+"frozenset({'48679', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'21903', '48679'})" --> frozenset({'21137'}) "conf: " 0.5
+"frozenset({'48679', '21137'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'48679', '47209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'31717', '21903'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '31717'})" --> frozenset({'21903'}) "conf: " 0.6000000000000001
+"frozenset({'31717', '21137'})" --> frozenset({'26209'}) "conf: " 0.5
+"frozenset({'26209', '31717'})" --> frozenset({'21137'}) "conf: " 0.6000000000000001
+"frozenset({'21903', '47209'})" --> frozenset({'31717'}) "conf: " 0.5
+"frozenset({'31717', '47209'})" --> frozenset({'21903'}) "conf: " 0.6000000000000001
+"frozenset({'31717', '21903'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'31717', '21137'})" --> frozenset({'21903'}) "conf: " 0.5
+"frozenset({'31717', '21903'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'21903', '31717'})" --> frozenset({'27966'}) "conf: " 0.7500000000000001
+"frozenset({'27966', '31717'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'27966', '21903'})" --> frozenset({'31717'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> frozenset({'26209'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '26209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '48679'})" --> frozenset({'24964'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '48679'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209'})" --> frozenset({'48679'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '21903'})" --> frozenset({'47626'}) "conf: " 0.6000000000000001
+"frozenset({'47626', '24964'})" --> frozenset({'21903'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '21903'})" --> frozenset({'21137'}) "conf: " 0.6000000000000001
+"frozenset({'21903', '48679'})" --> frozenset({'24964'}) "conf: " 0.5
+"frozenset({'24964', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24964', '21903'})" --> frozenset({'48679'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '21903'})" --> frozenset({'26209'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '26209'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'21137', '47209'})" --> frozenset({'13176'}) "conf: " 0.5
+"frozenset({'47626', '47209'})" --> frozenset({'13176'}) "conf: " 0.6000000000000001
+"frozenset({'13176', '47626'})" --> frozenset({'47209'}) "conf: " 0.5
+"frozenset({'2966', '47209'})" --> frozenset({'13176'}) "conf: " 1.0
+"frozenset({'13176', '2966'})" --> frozenset({'47209'}) "conf: " 1.0
+frozenset({'2966'}) --> "frozenset({'13176', '47209'})" "conf: " 0.6000000000000001
+"frozenset({'26209', '47209'})" --> frozenset({'21137'}) "conf: " 0.6000000000000001
+"frozenset({'31717', '47209'})" --> frozenset({'26209'}) "conf: " 0.6000000000000001
+"frozenset({'26209', '47209'})" --> frozenset({'31717'}) "conf: " 0.6000000000000001
+"frozenset({'26209', '31717'})" --> frozenset({'47209'}) "conf: " 0.6000000000000001
+"frozenset({'27966', '47209'})" --> frozenset({'47626'}) "conf: " 0.6000000000000001
+"frozenset({'47626', '47209'})" --> frozenset({'27966'}) "conf: " 0.6000000000000001
+"frozenset({'47626', '27966'})" --> frozenset({'47209'}) "conf: " 0.6000000000000001
+"frozenset({'21903', '47209'})" --> frozenset({'21137'}) "conf: " 0.5
+"frozenset({'21903', '47209'})" --> frozenset({'13176'}) "conf: " 0.5
+"frozenset({'44359', '21903'})" --> frozenset({'47626'}) "conf: " 0.5
+"frozenset({'47626', '44359'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'44359', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'44359', '21903'})" --> frozenset({'21137'}) "conf: " 0.5
+"frozenset({'47626', '8424'})" --> frozenset({'30391'}) "conf: " 0.5
+"frozenset({'30391', '8424'})" --> frozenset({'47626'}) "conf: " 0.7500000000000001
+"frozenset({'30391', '47626'})" --> frozenset({'8424'}) "conf: " 0.6000000000000001
+"frozenset({'21903', '21137'})" --> frozenset({'26209'}) "conf: " 0.625
+"frozenset({'26209', '21137'})" --> frozenset({'21903'}) "conf: " 0.7142857142857143
+"frozenset({'26209', '21903'})" --> frozenset({'21137'}) "conf: " 0.5
+"frozenset({'47626', '21137'})" --> frozenset({'21903'}) "conf: " 0.6000000000000001
+"frozenset({'47626', '21137'})" --> frozenset({'26209'}) "conf: " 0.6000000000000001
+"frozenset({'47626', '26209'})" --> frozenset({'21137'}) "conf: " 0.6000000000000001
+"frozenset({'5876', '47209'})" --> frozenset({'21137'}) "conf: " 0.7999999999999999
+"frozenset({'5876', '21137'})" --> frozenset({'47209'}) "conf: " 0.7999999999999999
+"frozenset({'22935', '47209'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'22935', '21137'})" --> frozenset({'47209'}) "conf: " 0.7500000000000001
+"frozenset({'34126', '21137'})" --> frozenset({'44359'}) "conf: " 0.6000000000000001
+"frozenset({'44359', '34126'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'44359', '21137'})" --> frozenset({'34126'}) "conf: " 0.7500000000000001
+"frozenset({'44359', '34126'})" --> frozenset({'24964'}) "conf: " 0.7500000000000001
+"frozenset({'24964', '34126'})" --> frozenset({'44359'}) "conf: " 0.5
+"frozenset({'24964', '44359'})" --> frozenset({'34126'}) "conf: " 1.0
+"frozenset({'24184', '34126'})" --> frozenset({'24964'}) "conf: " 1.0
+"frozenset({'24964', '24184'})" --> frozenset({'34126'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '34126'})" --> frozenset({'24184'}) "conf: " 0.5
+"frozenset({'34126', '21137'})" --> frozenset({'17794'}) "conf: " 0.6000000000000001
+"frozenset({'17794', '21137'})" --> frozenset({'34126'}) "conf: " 0.7500000000000001
+"frozenset({'17794', '34126'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'24964', '34126'})" --> frozenset({'13176'}) "conf: " 0.5
+"frozenset({'13176', '34126'})" --> frozenset({'24964'}) "conf: " 0.7500000000000001
+"frozenset({'13176', '24964'})" --> frozenset({'34126'}) "conf: " 0.6000000000000001
+"frozenset({'31506', '21903'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'31506', '26209'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'47626', '26209'})" --> frozenset({'21903'}) "conf: " 0.7999999999999999
+"frozenset({'21903', '10749'})" --> frozenset({'26209'}) "conf: " 0.6000000000000001
+"frozenset({'26209', '10749'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'17794', '21137'})" --> frozenset({'13176'}) "conf: " 0.7500000000000001
+"frozenset({'13176', '17794'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'47626', '21616'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '21903', '48679'})" --> frozenset({'24852'}) "conf: " 0.6000000000000001
+"frozenset({'26209', '24852', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24852', '21903', '48679'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'26209', '24852', '21903'})" --> frozenset({'48679'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '48679'})" --> "frozenset({'24852', '21903'})" "conf: " 0.6000000000000001
+"frozenset({'21903', '48679'})" --> "frozenset({'26209', '24852'})" "conf: " 0.5
+"frozenset({'24852', '48679'})" --> "frozenset({'26209', '21903'})" "conf: " 1.0
+"frozenset({'26209', '21903', '21137'})" --> frozenset({'24852'}) "conf: " 0.6000000000000001
+"frozenset({'26209', '24852', '21137'})" --> frozenset({'21903'}) "conf: " 0.7500000000000001
+"frozenset({'26209', '24852', '21903'})" --> frozenset({'21137'}) "conf: " 0.7500000000000001
+"frozenset({'24852', '21903', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '48679', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24964', '21903', '48679'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'48679', '21903', '21137'})" --> frozenset({'24964'}) "conf: " 1.0
+"frozenset({'24964', '21903', '21137'})" --> frozenset({'48679'}) "conf: " 1.0
+"frozenset({'24964', '48679'})" --> "frozenset({'21903', '21137'})" "conf: " 1.0
+"frozenset({'48679', '21137'})" --> "frozenset({'24964', '21903'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> "frozenset({'21903', '48679'})" "conf: " 0.7500000000000001
+"frozenset({'21903', '48679'})" --> "frozenset({'24964', '21137'})" "conf: " 0.5
+"frozenset({'24964', '21903'})" --> "frozenset({'48679', '21137'})" "conf: " 0.6000000000000001
+"frozenset({'24964', '26209', '48679'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'26209', '21903', '48679'})" --> frozenset({'24964'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '21903', '48679'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21903'})" --> frozenset({'48679'}) "conf: " 1.0
+"frozenset({'26209', '48679'})" --> "frozenset({'24964', '21903'})" "conf: " 0.6000000000000001
+"frozenset({'24964', '48679'})" --> "frozenset({'26209', '21903'})" "conf: " 1.0
+"frozenset({'24964', '26209'})" --> "frozenset({'21903', '48679'})" "conf: " 0.7500000000000001
+"frozenset({'21903', '48679'})" --> "frozenset({'24964', '26209'})" "conf: " 0.5
+"frozenset({'24964', '21903'})" --> "frozenset({'26209', '48679'})" "conf: " 0.6000000000000001
+"frozenset({'24964', '26209', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21903'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'26209', '21903', '21137'})" --> frozenset({'24964'}) "conf: " 0.6000000000000001
+"frozenset({'24964', '21903', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209'})" --> "frozenset({'21903', '21137'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> "frozenset({'26209', '21903'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '21903'})" --> "frozenset({'26209', '21137'})" "conf: " 0.6000000000000001
+"frozenset({'24964', '26209', '48679'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'48679', '26209', '21137'})" --> frozenset({'24964'}) "conf: " 1.0
+"frozenset({'24964', '48679', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21137'})" --> frozenset({'48679'}) "conf: " 1.0
+"frozenset({'26209', '48679'})" --> "frozenset({'24964', '21137'})" "conf: " 0.6000000000000001
+"frozenset({'24964', '48679'})" --> "frozenset({'26209', '21137'})" "conf: " 1.0
+"frozenset({'24964', '26209'})" --> "frozenset({'48679', '21137'})" "conf: " 0.7500000000000001
+"frozenset({'48679', '21137'})" --> "frozenset({'24964', '26209'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '21137'})" --> "frozenset({'26209', '48679'})" "conf: " 0.7500000000000001
+"frozenset({'26209', '31717', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'26209', '21903', '31717'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'21903', '21137', '31717'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'26209', '21903', '21137'})" --> frozenset({'31717'}) "conf: " 0.6000000000000001
+"frozenset({'26209', '31717'})" --> "frozenset({'21903', '21137'})" "conf: " 0.6000000000000001
+"frozenset({'31717', '21137'})" --> "frozenset({'26209', '21903'})" "conf: " 0.5
+"frozenset({'21903', '31717'})" --> "frozenset({'26209', '21137'})" "conf: " 0.7500000000000001
+"frozenset({'48679', '26209', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'26209', '21903', '48679'})" --> frozenset({'21137'}) "conf: " 0.6000000000000001
+"frozenset({'48679', '21903', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'26209', '21903', '21137'})" --> frozenset({'48679'}) "conf: " 0.6000000000000001
+"frozenset({'26209', '48679'})" --> "frozenset({'21903', '21137'})" "conf: " 0.6000000000000001
+"frozenset({'48679', '21137'})" --> "frozenset({'26209', '21903'})" "conf: " 0.7500000000000001
+"frozenset({'21903', '48679'})" --> "frozenset({'26209', '21137'})" "conf: " 0.5
+"frozenset({'24964', '26209', '48679', '21137'})" --> frozenset({'21903'}) "conf: " 1.0
+"frozenset({'26209', '21903', '48679', '21137'})" --> frozenset({'24964'}) "conf: " 1.0
+"frozenset({'24964', '21903', '48679', '21137'})" --> frozenset({'26209'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21903', '21137'})" --> frozenset({'48679'}) "conf: " 1.0
+"frozenset({'24964', '26209', '21903', '48679'})" --> frozenset({'21137'}) "conf: " 1.0
+"frozenset({'26209', '48679', '21137'})" --> "frozenset({'24964', '21903'})" "conf: " 1.0
+"frozenset({'24964', '48679', '21137'})" --> "frozenset({'26209', '21903'})" "conf: " 1.0
+"frozenset({'24964', '26209', '21137'})" --> "frozenset({'21903', '48679'})" "conf: " 1.0
+"frozenset({'24964', '26209', '48679'})" --> "frozenset({'21903', '21137'})" "conf: " 1.0
+"frozenset({'21903', '48679', '21137'})" --> "frozenset({'24964', '26209'})" "conf: " 1.0
+"frozenset({'26209', '21903', '21137'})" --> "frozenset({'24964', '48679'})" "conf: " 0.6000000000000001
+"frozenset({'26209', '21903', '48679'})" --> "frozenset({'24964', '21137'})" "conf: " 0.6000000000000001
+"frozenset({'24964', '21903', '21137'})" --> "frozenset({'26209', '48679'})" "conf: " 1.0
+"frozenset({'24964', '21903', '48679'})" --> "frozenset({'26209', '21137'})" "conf: " 1.0
+"frozenset({'24964', '26209', '21903'})" --> "frozenset({'48679', '21137'})" "conf: " 1.0
+"frozenset({'48679', '21137'})" --> "frozenset({'24964', '26209', '21903'})" "conf: " 0.7500000000000001
+"frozenset({'26209', '48679'})" --> "frozenset({'24964', '21903', '21137'})" "conf: " 0.6000000000000001
+"frozenset({'24964', '21137'})" --> "frozenset({'26209', '21903', '48679'})" "conf: " 0.7500000000000001
+"frozenset({'24964', '48679'})" --> "frozenset({'26209', '21903', '21137'})" "conf: " 1.0
+"frozenset({'24964', '26209'})" --> "frozenset({'21903', '48679', '21137'})" "conf: " 0.7500000000000001
+"frozenset({'21903', '48679'})" --> "frozenset({'24964', '26209', '21137'})" "conf: " 0.5
+"frozenset({'24964', '21903'})" --> "frozenset({'26209', '48679', '21137'})" "conf: " 0.6000000000000001

@@ -3,14 +3,23 @@
 
 #from pydoc import apropos
 import csv
-csvfile=open('output.csv', 'w', newline='')
-writer=csv.writer(csvfile, delimiter=' ')
+csvfile_output=open('result_apriori.csv', 'w', newline='')
+writer=csv.writer(csvfile_output, delimiter=' ')
 
-minium_support=0.1
+minium_support=0.005 # IBM 0.005
 #=========================     准备函数 （下）      ==========================================
 #加载数据集
 def loadDataSet():
     return [[1,3,4],[2,3,5],[1,2,3,5],[2,5]]
+
+def loadSimpDat():
+    simpDat = [['r', 'z', 'h', 'j', 'p'],
+               ['z', 'y', 'x', 'w', 'v', 'u', 't', 's'],
+               ['z'],
+               ['r', 'x', 'n', 'o', 's'],
+               ['y', 'r', 'x', 'z', 'q', 't', 'p'],
+               ['y', 'z', 'x', 'e', 'q', 's', 't', 'm']]
+    return simpDat
 
 def createC1(dataSet):
     C1 = []   #C1为大小为1的项的集合
@@ -149,28 +158,30 @@ def calcConf(freqSet, H, supportData, brl, minConf=0.7):
     for conseq in H:
         conf = supportData[freqSet] / supportData[freqSet - conseq]
         if conf >= minConf:
+
             print (freqSet - conseq, '-->', conseq, 'conf:', conf)
             writer.writerow([ freqSet-conseq, '-->', conseq, 'conf: ', str(conf)])
+
             brl.append((freqSet - conseq, conseq, conf))
             prunedH.append(conseq)
     return prunedH
 
-def rulesFromConseq(freqSet, H, supportData, brl, minConf=0.7):
+def rulesFromConseq(freqSet, H, supportData, brl, minConf): #1010
     '''生成候选规则集'''
-    m = len(H[0])
+    #print('H =', H)
+    if (H!=[]): # Mine modification
+        m = len(H[0])
+    else:
+        m = 0
     if (len(freqSet) > (m + 1)):
         Hmpl = aprioriGen(H, m + 1)
         Hmpl = calcConf(freqSet, Hmpl, supportData, brl, minConf)
         if (len(Hmpl) > 1):
             rulesFromConseq(freqSet, Hmpl, supportData, brl, minConf)
 
-
-if __name__=="__main__":
-    #dataSet = loadDataSet() original dataset
-
-    # load dataset from Kaggle
-    csvfile=open('order_products__train.csv', newline='')
-    rows=csv.reader(csvfile)
+def loadKaggleDataSet():
+    csvfile_kaggle=open('order_products_train.csv', newline='')
+    rows=csv.reader(csvfile_kaggle)
     this_order_id=None
     first_id=False
     dataSet=[]
@@ -190,18 +201,59 @@ if __name__=="__main__":
 
         this_order_id=row[0]
     dataSet=dataSet[1:]
-    
     dataSet=dataSet[:500] # dataSet is too big to analyse # TODO
+    return dataSet
+
+def loadIBMDataSet():
+    csvfile_IBM=open('data.csv',newline='')
+    rows=csv.reader(csvfile_IBM)
+    this_order_id=None
+    first_id=False
+    dataSet=[]
+    for row in rows:    
+        if first_id==False:
+            
+            dataSet.append([])
+            this_order_id=row[0]
+            first_id=True    
+
+        if row[0]==this_order_id:
+            dataSet[-1].append(row[1])
+        
+        else:
+            dataSet.append([])
+            dataSet[-1].append(row[1])
+
+        this_order_id=row[0]
+    dataSet=dataSet[1:]
+    #dataSet=dataSet[:50] # dataSet is too big to analyse # For IBM, commented
+    return dataSet
+
+if __name__=="__main__":
+    #dataSet = loadDataSet()
+    #dataSet = loadSimpDat()
+    dataSet = loadKaggleDataSet() 
+    #dataSet = loadIBMDataSet()
+
     L, suppData = apriori(dataSet)
     print('L = ', L,' suppData = ', suppData, '\n')
     i = 0
 
+    print('minium_support= ', minium_support, '\n')
+    writer.writerow(['minium_support='+str(minium_support)])
+
     for one in L:
-        print ( "项数为 %s 的频繁项集：" % (i + 1), one,"\n")
+        print ( 'The itemsets thant contain %s item(s)'% (i + 1), one,'\n')
+        string='The itemsets thant contain ' + str(i + 1) + ' item(s)'+ str(one)
+        writer.writerow([string])
         i +=1
 
-    print ('minConf=0.7时：')
-    rules = generateRules(L, suppData, minConf=0.002)
+    mine_minConf=0.7
+    print ('minConf='+str(mine_minConf)+'時：')
+    writer.writerow(['minConf='+str(mine_minConf)+'時：'])
+    rules = generateRules(L, suppData, minConf=mine_minConf)
 
-    print ('\n' + 'minConf=0.5时：')
-    rules = generateRules(L, suppData, minConf=0.001)
+    mine_minConf=0.5
+    print ('\n' + 'minConf='+str(mine_minConf)+'時：')
+    writer.writerow(['minConf='+str(mine_minConf)+'時：' ])
+    rules = generateRules(L, suppData, minConf=mine_minConf)
