@@ -6,7 +6,7 @@ import csv
 csvfile_output=open('result_apriori.csv', 'w', newline='')
 writer=csv.writer(csvfile_output, delimiter=' ')
 
-minium_support=0.005 # IBM 0.005
+minium_support=0.003 # IBM 0.005
 #=========================     准备函数 （下）      ==========================================
 #加载数据集
 def loadDataSet():
@@ -180,7 +180,7 @@ def rulesFromConseq(freqSet, H, supportData, brl, minConf): #1010
             rulesFromConseq(freqSet, Hmpl, supportData, brl, minConf)
 
 def loadKaggleDataSet():
-    csvfile_kaggle=open('order_products_train.csv', newline='')
+    csvfile_kaggle=open('../DataSet/order_products_train.csv', newline='')
     rows=csv.reader(csvfile_kaggle)
     this_order_id=None
     first_id=False
@@ -205,7 +205,7 @@ def loadKaggleDataSet():
     return dataSet
 
 def loadIBMDataSet():
-    csvfile_IBM=open('data.csv',newline='')
+    csvfile_IBM=open('../DataSet/data.csv',newline='')
     rows=csv.reader(csvfile_IBM)
     this_order_id=None
     first_id=False
@@ -232,8 +232,8 @@ def loadIBMDataSet():
 if __name__=="__main__":
     #dataSet = loadDataSet()
     #dataSet = loadSimpDat()
-    dataSet = loadKaggleDataSet() 
-    #dataSet = loadIBMDataSet()
+    #dataSet = loadKaggleDataSet() 
+    dataSet = loadIBMDataSet()
 
     L, suppData = apriori(dataSet)
     print('L = ', L,' suppData = ', suppData, '\n')

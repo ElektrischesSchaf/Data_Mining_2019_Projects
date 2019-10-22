@@ -68,6 +68,7 @@ class treeNode:
  
     def disp(self, ind=1):
         print ('   ' * ind, self.name, '   ', self.count)
+        writer.writerow(['   ' * ind, self.name, '   ', self.count ])
         for child in self.children.values():
             child.disp(ind + 1)
 
@@ -159,7 +160,7 @@ def loadSimpDat():
 
 def loadKaggleData():
     # load Kaggle dataSet
-    csvfile=open('order_products_train.csv', newline='')
+    csvfile=open('../DataSet/order_products_train.csv', newline='')
     rows=csv.reader(csvfile)
     this_order_id=None
     first_id=False
@@ -187,7 +188,7 @@ def loadKaggleData():
 
 def loadIBMData():
     # load Kaggle dataSet
-    csvfile=open('data.csv', newline='')
+    csvfile=open('../DataSet/data.csv', newline='')
     rows=csv.reader(csvfile)
     this_order_id=None
     first_id=False
