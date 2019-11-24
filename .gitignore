@@ -1,3 +1,4 @@
 *.pyc
 order_products_train.csv
 *.pdf
+myvenv/
