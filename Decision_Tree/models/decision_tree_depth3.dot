@@ -1,24 +1,24 @@
 digraph Tree {
 node [shape=box] ;
-0 [label="personality <= 0.5\ngini = 0.469\nsamples = 7500\nvalue = [4679, 2821]"] ;
-1 [label="face <= 0.5\ngini = 0.47\nsamples = 3729\nvalue = [1409, 2320]"] ;
+0 [label="personality <= 0.5\ngini = 0.467\nsamples = 7000\nvalue = [4398, 2602]"] ;
+1 [label="face <= 0.5\ngini = 0.47\nsamples = 3495\nvalue = [1320, 2175]"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
-2 [label="gini = 0.0\nsamples = 1816\nvalue = [0, 1816]"] ;
+2 [label="gini = 0.0\nsamples = 1720\nvalue = [0, 1720]"] ;
 1 -> 2 ;
-3 [label="rich <= 0.5\ngini = 0.388\nsamples = 1913\nvalue = [1409, 504]"] ;
+3 [label="height <= 0.5\ngini = 0.381\nsamples = 1775\nvalue = [1320, 455]"] ;
 1 -> 3 ;
-4 [label="gini = 0.499\nsamples = 969\nvalue = [465, 504]"] ;
+4 [label="gini = 0.5\nsamples = 886\nvalue = [431, 455]"] ;
 3 -> 4 ;
-5 [label="gini = 0.0\nsamples = 944\nvalue = [944, 0]"] ;
+5 [label="gini = 0.0\nsamples = 889\nvalue = [889, 0]"] ;
 3 -> 5 ;
-6 [label="rich <= 0.5\ngini = 0.23\nsamples = 3771\nvalue = [3270, 501]"] ;
+6 [label="face <= 0.5\ngini = 0.214\nsamples = 3505\nvalue = [3078, 427]"] ;
 0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
-7 [label="face <= 0.5\ngini = 0.393\nsamples = 1867\nvalue = [1366, 501]"] ;
+7 [label="rich <= 0.5\ngini = 0.375\nsamples = 1710\nvalue = [1283, 427]"] ;
 6 -> 7 ;
-8 [label="gini = 0.499\nsamples = 968\nvalue = [467, 501]"] ;
+8 [label="gini = 0.5\nsamples = 861\nvalue = [434, 427]"] ;
 7 -> 8 ;
-9 [label="gini = 0.0\nsamples = 899\nvalue = [899, 0]"] ;
+9 [label="gini = 0.0\nsamples = 849\nvalue = [849, 0]"] ;
 7 -> 9 ;
-10 [label="gini = 0.0\nsamples = 1904\nvalue = [1904, 0]"] ;
+10 [label="gini = 0.0\nsamples = 1795\nvalue = [1795, 0]"] ;
 6 -> 10 ;
 }
