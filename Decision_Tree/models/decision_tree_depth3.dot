@@ -1,0 +1,24 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="personality <= 0.5\ngini = 0.469\nsamples = 7500\nvalue = [4679, 2821]"] ;
+1 [label="face <= 0.5\ngini = 0.47\nsamples = 3729\nvalue = [1409, 2320]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 1816\nvalue = [0, 1816]"] ;
+1 -> 2 ;
+3 [label="rich <= 0.5\ngini = 0.388\nsamples = 1913\nvalue = [1409, 504]"] ;
+1 -> 3 ;
+4 [label="gini = 0.499\nsamples = 969\nvalue = [465, 504]"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 944\nvalue = [944, 0]"] ;
+3 -> 5 ;
+6 [label="rich <= 0.5\ngini = 0.23\nsamples = 3771\nvalue = [3270, 501]"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="face <= 0.5\ngini = 0.393\nsamples = 1867\nvalue = [1366, 501]"] ;
+6 -> 7 ;
+8 [label="gini = 0.499\nsamples = 968\nvalue = [467, 501]"] ;
+7 -> 8 ;
+9 [label="gini = 0.0\nsamples = 899\nvalue = [899, 0]"] ;
+7 -> 9 ;
+10 [label="gini = 0.0\nsamples = 1904\nvalue = [1904, 0]"] ;
+6 -> 10 ;
+}

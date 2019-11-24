@@ -1,0 +1,32 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="face <= 0.5\ngini = 0.463\nsamples = 7500\nvalue = [4771, 2729]"] ;
+1 [label="personality <= 0.5\ngini = 0.468\nsamples = 3635\nvalue = [1361, 2274]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 1817\nvalue = [0, 1817]"] ;
+1 -> 2 ;
+3 [label="rich <= 0.5\ngini = 0.376\nsamples = 1818\nvalue = [1361, 457]"] ;
+1 -> 3 ;
+4 [label="height <= 0.5\ngini = 0.5\nsamples = 919\nvalue = [462, 457]"] ;
+3 -> 4 ;
+5 [label="gini = 0.372\nsamples = 466\nvalue = [115, 351]"] ;
+4 -> 5 ;
+6 [label="gini = 0.358\nsamples = 453\nvalue = [347, 106]"] ;
+4 -> 6 ;
+7 [label="gini = 0.0\nsamples = 899\nvalue = [899, 0]"] ;
+3 -> 7 ;
+8 [label="rich <= 0.5\ngini = 0.208\nsamples = 3865\nvalue = [3410, 455]"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="personality <= 0.5\ngini = 0.363\nsamples = 1908\nvalue = [1453, 455]"] ;
+8 -> 9 ;
+10 [label="height <= 0.5\ngini = 0.5\nsamples = 930\nvalue = [475, 455]"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 455\nvalue = [0, 455]"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 475\nvalue = [475, 0]"] ;
+10 -> 12 ;
+13 [label="gini = 0.0\nsamples = 978\nvalue = [978, 0]"] ;
+9 -> 13 ;
+14 [label="gini = 0.0\nsamples = 1957\nvalue = [1957, 0]"] ;
+8 -> 14 ;
+}
