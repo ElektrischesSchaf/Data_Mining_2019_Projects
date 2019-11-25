@@ -17,79 +17,77 @@ DATA_NUM = [100, 500, 1000, 2500, 5000, 10000]
 
 #generator
 def GenerateOuptputFrom(i):
-        if i[0] == 1:
-            if i[2] == 1:
+        if i[0] == True:
+            if i[2] == True:
                 if i[11]==1:
-                    return 1
+                    return True
                 else:
                     if i[12]==1:
-                        return 1
+                        return True
                     else:
-                        return 0
+                        return False
             else:
-                if i[1] == 1:
+                if i[1] == True:
                     if i[13]==1:
-                        return 1
+                        return True
                     else:
                         if i[14]==1:
-                            return 1
+                            return True
                         else:
-                            return 0
+                            return False
                 else:
-                    if i[3] == 1:
-                        return 1
+                    if i[3] == True:
+                        return True
                     else:
-                        return 0
+                        return False
         else:
-            if i[3] == 1:
-                if i[1] == 1:
-                    return 1
+            if i[3] == True:
+                if i[1] == True:
+                    return True
                 else:
-                    if i[2] == 1:
-                        if i[6] == 1:
-                            return 1
+                    if i[2] == True:
+                        if i[6] == True:
+                            return True
                         else:
-                            if i[7] == 1:
-                                return 1
+                            if i[7] == True:
+                                return True
                             else:
-                                if[8] == 1:
-                                    return 1
+                                if[8] == True:
+                                    return True
                                 else:
-                                    return 0
+                                    return False
                     else:
-                        if i[5] == 1:
-                            if i[9] == 1:
-                                if[10] == 1:
-                                    return 1
+                        if i[5] == True:
+                            if i[9] == True:
+                                if[10] == True:
+                                    return True
                                 else:
-                                    return 0
+                                    return False
                             else:
                                 if i[18]==1:
                                     if i[19]==1:
-                                        return 1
+                                        return True
                                     else:
-                                        return 0
+                                        return False
                                 else:
-                                    return 0
+                                    return False
                         else:
-                            return 0
+                            return False
             else:
                 if i[15]==1:
                     if i[16]==1:
-                        return 1
+                        return True
                     else:
-                        return 0
+                        return False
                 else:
-                    return 0
-
-                        
+                    return False                        
 
 def data_generator(num_of_data):
     data = []
     for _ in range(num_of_data):
         tmp = []
         for i in range(len(ATT)):
-            boolean = random.choice([1, 0])
+            boolean = random.choice([True, False])
             tmp.append(boolean)
         output = GenerateOuptputFrom(tmp)
         tmp.append(output)
@@ -118,7 +116,9 @@ model = []
 
 if __name__=="__main__":
     # test different depth from 3 ~ 6 of tree
-    for i in range(3, 8):
+    test_depth_start=3
+    test_depth_end=6
+    for i in range(test_depth_start, test_depth_end+2):
         row1 = []
         row2 = []
 
@@ -127,7 +127,7 @@ if __name__=="__main__":
         for num in DATA_NUM:
             #print(num)
             data = data_generator(num)
-            if i != 7:
+            if i != test_depth_end+1:
                 m1, m2, x, y = build_decision_tree_model(data, i)
                 tmp_model = m1
             else:
