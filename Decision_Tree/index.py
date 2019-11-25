@@ -12,8 +12,8 @@ import graphviz
 ATT = ['attri_0','attri_1','attri_2','attri_3','attri_4',
 'attri_5','attri_6', 'attri_7', 'attri_8', 'attri_9', 
 'attri_10', 'attri_11', 'attri_12', 'attri_13', 'attri_14',
-'attri_15', 'attri_16', 'attri_17', 'attri_18', 'attri_19']
-DATA_NUM = [100, 500, 1000, 2500, 5000, 10000]
+'attri_15', 'attri_16', 'attri_17', 'attri_18', 'attri_19', 'attri_20']
+DATA_NUM = [100, 500, 1000, 2500, 5000, 10000, 20000]
 
 #generator
 def GenerateOuptputFrom(i):
@@ -22,7 +22,7 @@ def GenerateOuptputFrom(i):
                 if i[11]==1:
                     return True
                 else:
-                    if i[12]==1:
+                    if i[12] == True:
                         return True
                     else:
                         return False
@@ -31,7 +31,7 @@ def GenerateOuptputFrom(i):
                     if i[13]==1:
                         return True
                     else:
-                        if i[14]==1:
+                        if i[14]== True:
                             return True
                         else:
                             return False
@@ -42,7 +42,7 @@ def GenerateOuptputFrom(i):
                         return False
         else:
             if i[3] == True:
-                if i[1] == True:
+                if i[20] == True:
                     return True
                 else:
                     if i[2] == True:
@@ -64,8 +64,8 @@ def GenerateOuptputFrom(i):
                                 else:
                                     return False
                             else:
-                                if i[18]==1:
-                                    if i[19]==1:
+                                if i[18]== True:
+                                    if i[19]== True:
                                         return True
                                     else:
                                         return False
@@ -74,8 +74,8 @@ def GenerateOuptputFrom(i):
                         else:
                             return False
             else:
-                if i[15]==1:
-                    if i[16]==1:
+                if i[15]== True:
+                    if i[16]== True:
                         return True
                     else:
                         return False
