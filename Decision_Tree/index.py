@@ -112,8 +112,8 @@ def evaluation(model1, model2, test_x, test_y):
 # main process 
 table1 = []
 table2 = []
-model = []
-
+model_m1 = []
+model_m2 = []
 if __name__=="__main__":
     # test different depth from 3 ~ 6 of tree
     test_depth_start=3
@@ -129,14 +129,17 @@ if __name__=="__main__":
             data = data_generator(num)
             if i != test_depth_end+1:
                 m1, m2, x, y = build_decision_tree_model(data, i)
-                tmp_model = m1
+                tmp_model_m1 = m1
+                tmp_model_m2 = m2
             else:
                 m1, m2, x, y = build_decision_tree_model(data)
-                tmp_model = m1
+                tmp_model_m1 = m1
+                tmp_model_m2 = m2
             accuracy1, accuracy2 = evaluation(m1, m2, x, y)
             row1.append(accuracy1)
             row2.append(accuracy2)
-        model.append(tmp_model)
+        model_m1.append(tmp_model_m1)
+        model_m2.append(tmp_model_m2)
         table1.append(row1)
         table2.append(row2)
 
@@ -151,9 +154,18 @@ if __name__=="__main__":
     print(output2.head())
 
     # store model in file
-    for i in range(len(model)):
-        with open('./models/decision_tree_depth'+str(i+3)+'.dot','w') as f:
+    for i in range(len(model_m1)):
+        with open('./models/decision_tree_depth_m1_'+str(i+3)+'.dot','w') as f:
             #f = tree.export_graphviz(model[i], feature_names=ATT, out_file=f )
-            tree.export_graphviz(model[i], feature_names=ATT, out_file=f )
+            tree.export_graphviz(model_m1[i], feature_names=ATT, out_file=f )
+          
+            #graph=graphviz.Source(f)
+            #graph.render('./models/decision_tree_depth'+str(i+3))
+
+    for i in range(len(model_m2)):
+        with open('./models/decision_tree_depth_m2_'+str(i+3)+'.dot','w') as f:
+            #f = tree.export_graphviz(model[i], feature_names=ATT, out_file=f )
+           
+            tree.export_graphviz(model_m2[i], feature_names=ATT, out_file=f )
             #graph=graphviz.Source(f)
             #graph.render('./models/decision_tree_depth'+str(i+3))
