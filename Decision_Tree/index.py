@@ -1,56 +1,87 @@
 import numpy as np
 import random
+import matplotlib as plt
 import pandas as pd
 from sklearn import tree
 from sklearn.model_selection import train_test_split
+from sklearn.tree import export_graphviz
+import graphviz
 
 #declare parameter
 # attribute/feature
-ATT = ['face','rich','height','personality','warm','social','exercise']
+ATT = ['attri_0','attri_1','attri_2','attri_3','attri_4',
+'attri_5','attri_6', 'attri_7', 'attri_8', 'attri_9', 
+'attri_10', 'attri_11', 'attri_12', 'attri_13', 'attri_14',
+'attri_15', 'attri_16', 'attri_17', 'attri_18', 'attri_19']
 DATA_NUM = [100, 500, 1000, 2500, 5000, 10000]
 
 #generator
 def GenerateOuptputFrom(i):
         if i[0] == 1:
             if i[2] == 1:
-                return 0
+                if i[11]==1:
+                    return 1
+                else:
+                    if i[12]==1:
+                        return 1
+                    else:
+                        return 0
             else:
                 if i[1] == 1:
-                    return 0
+                    if i[13]==1:
+                        return 1
+                    else:
+                        if i[14]==1:
+                            return 1
+                        else:
+                            return 0
                 else:
                     if i[3] == 1:
-                        return 0
-                    else:
                         return 1
+                    else:
+                        return 0
         else:
-            if i[3] == 0:
-                return 1
-            else:
+            if i[3] == 1:
                 if i[1] == 1:
-                    return 0
+                    return 1
                 else:
                     if i[2] == 1:
-                        if i[5] == 1:
-                            return 0
+                        if i[6] == 1:
+                            return 1
                         else:
-                            if i[4] == 1:
-                                return 0
+                            if i[7] == 1:
+                                return 1
                             else:
-                                if[6] == 1:
-                                    return 0
-                                else:
+                                if[8] == 1:
                                     return 1
+                                else:
+                                    return 0
                     else:
                         if i[5] == 1:
-                            if i[4] == 1:
-                                if[6] == 1:
-                                    return 0
-                                else:
+                            if i[9] == 1:
+                                if[10] == 1:
                                     return 1
+                                else:
+                                    return 0
                             else:
-                                return 0
+                                if i[18]==1:
+                                    if i[19]==1:
+                                        return 1
+                                    else:
+                                        return 0
+                                else:
+                                    return 0
                         else:
-                            return 1
+                            return 0
+            else:
+                if i[15]==1:
+                    if i[16]==1:
+                        return 1
+                    else:
+                        return 0
+                else:
+                    return 0
+
                         
 
 def data_generator(num_of_data):
@@ -122,4 +153,7 @@ if __name__=="__main__":
     # store model in file
     for i in range(len(model)):
         with open('./models/decision_tree_depth'+str(i+3)+'.dot','w') as f:
-            f = tree.export_graphviz(model[i],feature_names=ATT,out_file=f )
+            #f = tree.export_graphviz(model[i], feature_names=ATT, out_file=f )
+            tree.export_graphviz(model[i], feature_names=ATT, out_file=f )
+            #graph=graphviz.Source(f)
+            #graph.render('./models/decision_tree_depth'+str(i+3))
