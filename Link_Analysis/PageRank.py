@@ -6,6 +6,8 @@ os.environ["OMP_NUM_THREADS"] = "1"
 import numpy as np
 import pandas as pd
 import matplotlib
+import time
+tStart=time.time()
 
 class DensePageRank:
     def load_graph_dataset(self, data_home, is_undirected=False):
@@ -124,3 +126,7 @@ for (i, degree, row_sum) in zip(range(dpr.n), dpr.out_degrees, row_sums):
 # print the PageRank score of each node
 for (i, score) in zip(range(dpr.n), p):
     print("node: {:2d}, PageRank score: {:.4f}".format(i, score))
+
+
+tEnd=time.time()
+print('Overall processing time: '+ str ( round( (tEnd-tStart) , 3) )+' seconds' )

@@ -6,6 +6,8 @@ import sys
 #sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), '../..')))
 from networkx_addon.similarity.simrank import simrank
 from networkx_addon.similarity.simrank import simrank2
+import time
+tStart=time.time()
 #print(dir(simrank))
 '''
 G = networkx.Graph()
@@ -45,3 +47,7 @@ K.add_edges_from(new_edges)
 #print(K)
 print(simrank2(K))
 '''
+
+
+tEnd=time.time()
+print('Overall processing time: '+ str ( round( (tEnd-tStart) , 3) )+' seconds' )

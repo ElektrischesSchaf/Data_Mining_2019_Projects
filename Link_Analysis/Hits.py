@@ -6,6 +6,8 @@ os.environ["OMP_NUM_THREADS"] = "1"
 import numpy as np
 from scipy.sparse import csr_matrix, find
 import pandas as pd
+import time
+tStart=time.time()
 
 class SparseHITS:
     def load_graph_dataset(self, data_home, is_undirected=False):
@@ -53,8 +55,77 @@ class SparseHITS:
         self.n = self.A.shape[0]     # number of nodes
         self.m = self.A.nnz          # number of edges
 
+
+    def iterate_HITS(self, epsilon=1e-9, maxIters=100):
+        '''
+        Iterate the HITS equation to obatin the hub & authority score vectors
+        
+        inputs:
+            epsilon: float
+                the error tolerance of the iteration
+            maxIters: int
+                the maximum number of iterations
+                
+        outputs:
+            h: np.ndarray (n x 1 vector)
+                the final hub score vector
+            a: np.ndarray (n x 1 vector)
+                the final authority score vector
+            h_residuals: list
+                the list of hub residuals over the iteration
+            a_residuals: list
+                the list of authority residuals over the iteration
+
+        '''
+        old_h = np.ones(self.n)/self.n
+        old_a = np.ones(self.n)/self.n
+        h_residuals = []
+        a_residuals = []
+        
+        for t in range(maxIters):
+            h = self.A.dot(old_a)
+            a = self.AT.dot(h)
+                        
+            h = h / np.linalg.norm(h, 2)
+            a = a / np.linalg.norm(a, 2)
+            
+            h_residual = np.linalg.norm(h - old_h, 1)
+            a_residual = np.linalg.norm(a - old_a, 1)
+            h_residuals.append(h_residual)
+            a_residuals.append(a_residual)
+            old_h = h
+            old_a = a
+            
+            if h_residual < epsilon and a_residual < epsilon:
+                break
+        
+        return h, a, h_residuals, a_residuals
+
+    def rank_nodes(self,ranking_scores, topk=-1):
+        sorted_nodes = np.flipud(np.argsort(ranking_scores))
+        sorted_scores = ranking_scores[sorted_nodes]
+        ranking_results = pd.DataFrame()
+        ranking_results["node_id"] = sorted_nodes
+        ranking_results["score"] = sorted_scores
+        
+        return ranking_results[0:topk]
+
+
+
 data_home = './project3dataset/hw3dataset'
 hits = SparseHITS()
 hits.load_graph_dataset(data_home, is_undirected=False)
 print("The number n of nodes: {}".format(hits.n))
 print("The number m of edges: {}".format(hits.m))
+
+h, a, _, _ = hits.iterate_HITS(epsilon=1e-9, maxIters=100)
+
+print("Top-{} rankings based on the hub score vector:".format(hits.n))
+print(hits.rank_nodes(h, hits.n))
+
+print("Top-{} rankings based on the authority score vector".format(hits.m))
+print(hits.rank_nodes(a, hits.m))
+
+
+tEnd=time.time()
+print('Overall processing time: '+ str ( round( (tEnd-tStart) , 3) )+' seconds' )
