@@ -2,3 +2,10 @@
 order_products_train.csv
 *.pdf
 myvenv/
+
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.gz
